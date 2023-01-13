@@ -1,6 +1,7 @@
 {
   "name": "Juno",
   "chainId": "juno-1",
+  "chain_type": "cosmos",
   "assets": [
     {
       "name": "Juno",

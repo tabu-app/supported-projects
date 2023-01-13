@@ -1,6 +1,7 @@
 {
   "name": "Umee",
   "chainId": "umee-1",
+  "chain_type": "cosmos",
   "assets": [
     {
       "name": "Umee",

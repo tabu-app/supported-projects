@@ -1,12 +1,13 @@
 {
   "name": "Cosmos Hub",
   "chainId": "cosmoshub-4",
+  "chain_type": "cosmos",
   "assets": [
     {
       "name": "Cosmos",
-      "cosmosHubId": "cosmoshub",
       "symbol": "ATOM",
       "baseDenom": "uatom",
+      "cosmosHubId": "cosmoshub",
       "decimals": 6,
       "website": "https://cosmos.network/",
       "explorer": "https://www.mintscan.io/cosmos",

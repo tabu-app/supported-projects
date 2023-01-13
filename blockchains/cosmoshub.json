@@ -1,7 +1,10 @@
 {
   "name": "Cosmos Hub",
   "chainId": "cosmoshub-4",
-  "chain_type": "cosmos",
+  "type": "cosmos",
+  "logo": "ADD",
+  "denom": "uatom",
+  "prefix": "cosmos",
   "assets": [
     {
       "name": "Cosmos",

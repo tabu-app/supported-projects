@@ -83,11 +83,14 @@ const COSMOS_CHAIN_SCHEMA = {
   properties: {
     name: { type: "string" },
     chainId: { type: "string" },
-    chain_type: { type: "string" },
+    type: { type: "string" },
+    logo: { type: "string" },
+    denom: { type: "string" },
+    prefix: { type: "string" },
     assets: COSMOS_ARRAY_SCHEMA,
   },
 
-  required: ["name", "chainId", "chain_type", "assets"],
+  required: ["name", "chainId", "type", "logo", "denom", "prefix", "assets"],
   additionalProperties: true,
 };
 
@@ -96,11 +99,14 @@ const EVM_CHAIN_SCHEMA = {
   properties: {
     name: { type: "string" },
     chainId: { type: "string" },
-    chain_type: { type: "string" },
+    type: { type: "string" },
+    logo: { type: "string" },
+    denom: { type: "string" },
+    prefix: { type: "string" },
     assets: EVM_ARRAY_SCHEMA,
   },
 
-  required: ["name", "chainId", "chain_type", "assets"],
+  required: ["name", "chainId", "type", "logo", "denom", "prefix", "assets"],
   additionalProperties: true,
 };
 
@@ -112,16 +118,13 @@ function isValidProp(prop: any): boolean {
 }
 
 function isValidAsset(obj: any): boolean {
-  if (
-    !obj.chain_type ||
-    (obj.chain_type !== "cosmos" && obj.chain_type !== "evm")
-  ) {
+  if (!obj.type || (obj.type !== "cosmos" && obj.type !== "evm")) {
     return false;
   }
 
   for (let asset of obj.assets) {
     let validProps;
-    if (obj.chain_type === "cosmos") {
+    if (obj.type === "cosmos") {
       validProps = [
         asset.name,
         asset.symbol,
@@ -182,15 +185,15 @@ describe(`Validate supported assets`, () => {
 
       var propertyTest;
 
-      if (chainInfo.chain_type === "cosmos") {
+      if (chainInfo.type === "cosmos") {
         propertyTest = cosmosValidationModel(chainInfo);
-      } else if (chainInfo.chain_type === "evm") {
+      } else if (chainInfo.type === "evm") {
         propertyTest = evmValidationModel(chainInfo);
       }
 
       if (!testType) {
         throw new Error(
-          `Asset ${key} does not adhere to the @tabu/shared-types.Blockchain schema`
+          `Asset ${chainInfo.name} does not adhere to the @tabu/shared-types.Blockchain schema`
         );
       }
       if (!propertyTest) {

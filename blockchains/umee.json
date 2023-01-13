@@ -1,7 +1,10 @@
 {
   "name": "Umee",
   "chainId": "umee-1",
-  "chain_type": "cosmos",
+  "type": "cosmos",
+  "logo": "ADD",
+  "denom": "uumee",
+  "prefix": "umee",
   "assets": [
     {
       "name": "Umee",

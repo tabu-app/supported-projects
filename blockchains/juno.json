@@ -1,13 +1,16 @@
 {
   "name": "Juno",
   "chainId": "juno-1",
-  "chain_type": "cosmos",
+  "type": "cosmos",
+  "logo": "ADD",
+  "denom": "ujuno",
+  "prefix": "juno",
   "assets": [
     {
       "name": "Juno",
       "symbol": "JUNO",
-      "cosmosHubId": "juno",
       "baseDenom": "ujuno",
+      "cosmosHubId": "juno",
       "decimals": 6,
       "website": "https://www.junonetwork.io/",
       "explorer": "https://www.mintscan.io/juno",

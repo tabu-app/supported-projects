@@ -1,7 +1,10 @@
 {
   "name": "Osmo",
   "chainId": "osmosis-1",
-  "chain_type": "cosmos",
+  "type": "cosmos",
+  "logo": "ADD",
+  "denom": "uosmo",
+  "prefix": "osmo",
   "assets": [
     {
       "name": "Osmosis",

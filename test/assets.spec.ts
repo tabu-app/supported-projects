@@ -107,57 +107,53 @@ const EVM_CHAIN_SCHEMA = {
 const cosmosValidationModel = ajv.compile(COSMOS_CHAIN_SCHEMA);
 const evmValidationModel = ajv.compile(EVM_CHAIN_SCHEMA);
 
-function isValidProp(prop): boolean {
-  return typeof prop === "string";
+function isValidProp(prop: any): boolean {
+  return typeof prop === "string" && prop.length > 1;
 }
 
-function isValidAsset(obj: any): obj is Blockchain {
-  //loop around an object and check if all properties are valid
-
-  if (obj.chain_type === "cosmos") {
-    obj.assets.forEach((asset) => {
-      console.log(asset);
-      console.log(isValidProp(asset.name));
-      if (
-        isValidProp(asset.name) ||
-        isValidProp(asset.symbol) ||
-        isValidProp(asset.baseDenom) ||
-        isValidProp(asset.cosmosHubId) ||
-        isValidProp(asset.website) ||
-        isValidProp(asset.explorer) ||
-        isValidProp(asset.shortDescription) ||
-        isValidProp(asset.description) ||
-        isValidProp(asset.link) ||
-        isValidProp(asset.coinGeckoId) ||
-        isValidProp(asset.logo)
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-  } else if (obj.chain_type === "evm") {
-    obj.assets.forEach((asset) => {
-      if (
-        isValidProp(asset.address) ||
-        isValidProp(asset.name) ||
-        isValidProp(asset.symbol) ||
-        isValidProp(asset.website) ||
-        isValidProp(asset.explorer) ||
-        isValidProp(asset.shortDescription) ||
-        isValidProp(asset.description) ||
-        isValidProp(asset.link) ||
-        isValidProp(asset.coinGeckoId) ||
-        isValidProp(asset.logo)
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    });
+function isValidAsset(obj: any): boolean {
+  if (
+    !obj.chain_type ||
+    (obj.chain_type !== "cosmos" && obj.chain_type !== "evm")
+  ) {
+    return false;
   }
-  console.log("INVALID CHAIN:::, ", obj.name);
-  return false;
+
+  for (let asset of obj.assets) {
+    let validProps;
+    if (obj.chain_type === "cosmos") {
+      validProps = [
+        asset.name,
+        asset.symbol,
+        asset.baseDenom,
+        asset.cosmosHubId,
+        asset.website,
+        asset.explorer,
+        asset.shortDescription,
+        asset.description,
+        asset.link,
+        asset.coinGeckoId,
+        asset.logo,
+      ];
+    } else {
+      validProps = [
+        asset.address,
+        asset.name,
+        asset.symbol,
+        asset.website,
+        asset.explorer,
+        asset.shortDescription,
+        asset.description,
+        asset.link,
+        asset.coinGeckoId,
+        asset.logo,
+      ];
+    }
+    if (!validProps.every(isValidProp)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 describe(`Validate supported assets`, () => {
@@ -185,14 +181,13 @@ describe(`Validate supported assets`, () => {
       const testType = isValidAsset(chainInfo);
 
       var propertyTest;
+
       if (chainInfo.chain_type === "cosmos") {
-        console.log("COSMOS", chainInfo.name);
         propertyTest = cosmosValidationModel(chainInfo);
       } else if (chainInfo.chain_type === "evm") {
-        console.log("EVM", chainInfo.name);
         propertyTest = evmValidationModel(chainInfo);
       }
-      console.log("TEST TYPE ", testType);
+
       if (!testType) {
         throw new Error(
           `Asset ${key} does not adhere to the @tabu/shared-types.Blockchain schema`

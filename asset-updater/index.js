@@ -125,5 +125,5 @@ async function storeProjects(projects) {
 }
 
 console.log('STARGING ASSET AND PROJECT UPDATER')
-extractDirectoryContents(ASSETS_DIR).then(assets => storeAssets(assets));
+extractDirectoryContents(ASSETS_DIR).then(chains => storeAssets(chains));
 extractDirectoryContents(PROJECTS_DIR).then(projects => storeProjects(projects));

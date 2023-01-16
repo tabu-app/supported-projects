@@ -2,31 +2,39 @@
 
 Supported Projects for Tao-Systems Projects API
 
-To add an Asset to Tabu Wallet follow the steps below:
+To add an blockchain to Tabu Wallet follow the steps below:
 
-1. First create a new branch with this format `Asset/Symbol`.
-2. Create a folder in the assets director with the name of the asset.
-3. Create a index.ts file in that folder with the following format:
+1. First create a new branch with this format `Blockchain/Name`.
+2. Create a folder in the blockchain director with the name of the blockchain.
+
+The json should be as follows:
 
 ```json
 {
-  "type": "ERC20",
-  "chainId": "1",
-  "address": "0xc0a4df35568f116c370e6a6a6022ceb908eeddac",
   "name": "Umee",
-  "symbol": "UMEE",
-  "baseDenom":"uumee",
-  "cosmosHubId": "umee",
-  "decimals": 6,
-  "website": "https://umee.cc/",
-  "explorer": "https://www.mintscan.io/umee",
-  "shortDescription": "Simplest way to start your DeFi experience for staking, rates, and interoperable solutions across blockchains.",
-  "description": "Umee is a layer one blockchain for cross chain communication and interoperability, built on the Cosmos SDK and powered by Tendermint Consensus along with a self sovereign validator network.",
-  "link": "https://app.umee.cc/#/markets",
-  "coinGeckoId": "umee",
-  "logo": "https://assets.coingecko.com/coins/images/20635/small/1Ab_Umee_Brand_Icon_Full_Color.png?1645018295"
+  "chainId": "umee-1",
+  "assets": [
+    {
+      "name": "Umee",
+      "symbol": "UMEE",
+      "baseDenom": "uumee",
+      "cosmosHubId": "umee",
+      "decimals": 6,
+      "website": "https://umee.cc/",
+      "explorer": "https://www.mintscan.io/umee",
+      "shortDescription": "Short description ",
+      "description": "Full description",
+      "link": "https://app.umee.cc/#/markets",
+      "coinGeckoId": "umee",
+      "logo": "https://assets.coingecko.com/coins/images/20635/small/1Ab_Umee_Brand_Icon_Full_Color.png?1645018295"
+    }
+  ]
 }
 ```
+
+Notice the assets array is where you would add native assets of that chain. Different chains may have different params.
+
+For example ethereum assets have the "address" param.
 
 ## Type Options
 

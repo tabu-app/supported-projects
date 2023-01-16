@@ -579,10 +579,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@tabu/shared-types@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@tabu/shared-types/-/shared-types-1.0.0.tgz#8df26366773aab34bc2ef8a6fe92a8a40fa39aaf"
-  integrity sha512-jvuKtrZaUQ44JxjvmP0yw4CAD4zwPYtVbsdPcuJQqwv4glh5tiaz6cbPPwITMqw5zEaYJ+vHfrJMTVjLDgs/Nw==
+"@tabu/shared-types@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@tabu/shared-types/-/shared-types-1.1.2.tgz#59fedc66e99f33d1f602a4b40fb0aa37ec2c6f31"
+  integrity sha512-bA5tB+qP+xOLr9cK4PBanpjv3zDEWwi0CtpeKS8rpgCe/hmcDobqdNFZ6nHP7zC0plcVjm50OuBlGtRC7YCJJw==
 
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"

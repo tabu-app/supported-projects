@@ -36,18 +36,17 @@ async function extractDirectoryContents(TARGET_DIR) {
   }
 
 }
-async function storeAssets(assets) {
-  if (!assets || !assets.length > 0) {
+async function storeAssets(chains) {
+  if (!chains || !chains.length > 0) {
     return
   }
   try {
-    console.log('SAVING ASSETS', assets)
+    console.log('SAVING ASSETS', chains)
     firestore.runTransaction(async t => {
       const snapshot = await firestore.collection('assets').get()
       console.log(`SNAPSHOT`, snapshot)
       if (snapshot.exists) {
-        const updateSymbolList = assets.map(asset => asset.symbol.toUpperCase());
-
+        const updateSymbolList = assets.map(chains => chains.assets).map(asset => asset.symbol);
         const docData = snapshot.docs.map(doc => doc.data());
 
         const deleteAssetList = docData.reduce((acc, doc) => {
@@ -124,5 +123,5 @@ async function storeProjects(projects) {
 }
 
 console.log('STARGING ASSET AND PROJECT UPDATER')
-extractDirectoryContents(ASSETS_DIR).then(assets => storeAssets(assets));
+extractDirectoryContents(ASSETS_DIR).then(chains => storeAssets(chains));
 extractDirectoryContents(PROJECTS_DIR).then(projects => storeProjects(projects));

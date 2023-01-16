@@ -1,0 +1,24 @@
+{
+  "name": "Juno",
+  "chainId": "juno-1",
+  "type": "cosmos",
+  "logo": "ADD",
+  "denom": "ujuno",
+  "prefix": "juno",
+  "assets": [
+    {
+      "name": "Juno",
+      "symbol": "JUNO",
+      "baseDenom": "ujuno",
+      "cosmosHubId": "juno",
+      "decimals": 6,
+      "website": "https://www.junonetwork.io/",
+      "explorer": "https://www.mintscan.io/juno",
+      "shortDescription": "50+ Dapps, Contracts, Tools, NFT Collections and 2000+ DAOs built on Juno",
+      "description": "Use & create interoperable applications on Juno. A decentralized, public, permission-less network for cross-chain smart contracts.",
+      "link": "https://www.junonetwork.io/",
+      "coinGeckoId": "juno-network",
+      "logo": "https://assets.coingecko.com/coins/images/19249/small/juno.png?1642838082"
+    }
+  ]
+}

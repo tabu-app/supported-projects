@@ -5,6 +5,8 @@
   "logo": "ADD",
   "denom": "uumee",
   "prefix": "umee",
+  "rpc": "",
+  "api": "",
   "assets": [
     {
       "name": "Umee",

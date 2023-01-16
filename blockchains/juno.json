@@ -5,6 +5,8 @@
   "logo": "ADD",
   "denom": "ujuno",
   "prefix": "juno",
+  "rpc": "",
+  "api": "",
   "assets": [
     {
       "name": "Juno",

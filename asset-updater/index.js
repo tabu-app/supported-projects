@@ -46,7 +46,7 @@ async function storeAssets(chains) {
       const snapshot = await firestore.collection('assets').get()
       console.log(`SNAPSHOT`, snapshot)
       if (snapshot.exists) {
-        const updateSymbolList = assets.map(chains => chains.assets).map(asset => asset.symbol);
+        const updateSymbolList = assets.map(asset => asset.symbol);
         const docData = snapshot.docs.map(doc => doc.data());
 
         const deleteAssetList = docData.reduce((acc, doc) => {

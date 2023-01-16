@@ -74,7 +74,7 @@ async function storeAssets(chains) {
         const chainId = chain.chainId;
 
         if(chain.assets.length){
-          chains.assets.forEach(asset => {
+          chain.assets.forEach(asset => {
             const key = asset.symbol;
             firestore.collection('assets')
               .doc(key)

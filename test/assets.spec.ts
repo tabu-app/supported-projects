@@ -87,10 +87,22 @@ const COSMOS_CHAIN_SCHEMA = {
     logo: { type: "string" },
     denom: { type: "string" },
     prefix: { type: "string" },
+    rpc: { type: "string" },
+    api: { type: "string" },
     assets: COSMOS_ARRAY_SCHEMA,
   },
 
-  required: ["name", "chainId", "type", "logo", "denom", "prefix", "assets"],
+  required: [
+    "name",
+    "chainId",
+    "type",
+    "logo",
+    "denom",
+    "prefix",
+    "rpc",
+    "api",
+    "assets",
+  ],
   additionalProperties: true,
 };
 
@@ -103,10 +115,22 @@ const EVM_CHAIN_SCHEMA = {
     logo: { type: "string" },
     denom: { type: "string" },
     prefix: { type: "string" },
+    rpc: { type: "string" },
+    api: { type: "string" },
     assets: EVM_ARRAY_SCHEMA,
   },
 
-  required: ["name", "chainId", "type", "logo", "denom", "prefix", "assets"],
+  required: [
+    "name",
+    "chainId",
+    "type",
+    "logo",
+    "denom",
+    "prefix",
+    "rpc",
+    "api",
+    "assets",
+  ],
   additionalProperties: true,
 };
 

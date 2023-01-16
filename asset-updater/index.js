@@ -36,23 +36,22 @@ async function extractDirectoryContents(TARGET_DIR) {
   }
 
 }
-async function storeAssets(assets) {
-  if (!assets || !assets.length > 0) {
+async function storeAssets(chains) {
+  if (!chains || !chains.length > 0) {
     return
   }
   try {
-    console.log('SAVING ASSETS', assets)
+    console.log('SAVING ASSETS', chains)
     firestore.runTransaction(async t => {
       const snapshot = await firestore.collection('assets').get()
       console.log(`SNAPSHOT`, snapshot)
       if (snapshot.exists) {
-        const updateSymbolList = assets.map(asset => asset.symbol)
-
+        const updateSymbolList = assets.map(chains => chains.assets).map(asset => asset.symbol);
         const docData = snapshot.docs.map(doc => doc.data());
 
         const deleteAssetList = docData.reduce((acc, doc) => {
-          if (!updateSymbolList.includes(doc.symbol)) {
-            acc.push(doc.symbol)
+          if (!updateSymbolList.includes(doc.symbol.toUpperCase())) {
+            acc.push(doc.symbol.toUpperCase())
           }
           return acc
         }, [])
@@ -66,7 +65,7 @@ async function storeAssets(assets) {
 
 
       await Promise.all(assets.map(async asset => {
-        const key = asset.symbol;
+        const key = asset.symbol.toUpperCase();
         firestore.collection('assets')
           .doc(key)
           .set(asset)
@@ -89,13 +88,13 @@ async function storeProjects(projects) {
     firestore.runTransaction(async t => {
       const snapshot = await firestore.collection('projects').get()
       if (snapshot.exists) {
-        const updateSymbolList = projects.map(project => project.name)
+        const updateSymbolList = projects.map(project => project.name.toUpperCase())
 
         const docData = snapshot.docs.map(doc => doc.data());
 
         const deleteAssetList = docData.reduce((acc, doc) => {
-          if (!updateSymbolList.includes(doc.name)) {
-            acc.push(doc.name)
+          if (!updateSymbolList.includes(doc.name.toUpperCase())) {
+            acc.push(doc.name.toUpperCase())
           }
           return acc
         }, [])
@@ -109,7 +108,7 @@ async function storeProjects(projects) {
       }))
 
       await Promise.all(assets.map(async asset => {
-        const key = asset.name;
+        const key = asset.name.toUpperCase();
         firestore.collection('projects')
           .doc(key)
           .set(asset)
@@ -124,5 +123,5 @@ async function storeProjects(projects) {
 }
 
 console.log('STARGING ASSET AND PROJECT UPDATER')
-extractDirectoryContents(ASSETS_DIR).then(assets => storeAssets(assets));
+extractDirectoryContents(ASSETS_DIR).then(chains => storeAssets(chains));
 extractDirectoryContents(PROJECTS_DIR).then(projects => storeProjects(projects));

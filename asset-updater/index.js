@@ -44,11 +44,15 @@ async function storeAssets(chains) {
     console.log('SAVING ASSETS', JSON.stringify(chains))
     firestore.runTransaction(async t => {
       const snapshot = await firestore.collection('assets').get()
-      const assets = chains.map(chain => chain.assets)
+      const assets = chains.map(chain => chain.assets) 
+      .reduce((acc, assets)=> [...acc, assets],[])
   
+      
+
       if (snapshot.exists) {
         console.log(`SNAPSHOT EXISTS`)
-        const updateSymbolList = chains.map(chain => chain.assets).map(asset => asset.symbol)
+        const updateSymbolList = chains.map(chain => chain.assets)
+        .map(asset => asset.symbol)
 
 
         const docData = snapshot.docs.map(doc => doc.data());
@@ -69,12 +73,21 @@ async function storeAssets(chains) {
       }
 
       console.log(`SAVING ASSETS`)
-      await Promise.all(assets.map(async asset => {
-        const key = asset.symbol;
-        console.log(`SAVING ASSET`, asset)
-        firestore.collection('assets')
-          .doc(key)
-          .set(asset)
+      await Promise.all(chains.map(async chain => {
+        
+        console.log(`SAVING ASSET`, chain)
+        const chainId = chain.chainId;
+
+        if(chain.assets.length){
+          chains.assets.forEach(asset => {
+            const key = asset.symbol;
+            firestore.collection('assets')
+              .doc(key)
+              .set({...asset, chainId})
+          })
+        }
+
+
       }))
 
       return t

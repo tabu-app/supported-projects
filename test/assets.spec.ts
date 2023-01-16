@@ -185,9 +185,9 @@ describe(`Validate supported assets`, () => {
 
       var propertyTest;
 
-      if (chainInfo.chain_type === "cosmos") {
+      if (chainInfo.type === "cosmos") {
         propertyTest = cosmosValidationModel(chainInfo);
-      } else if (chainInfo.chain_type === "evm") {
+      } else if (chainInfo.type === "evm") {
         propertyTest = evmValidationModel(chainInfo);
       }
 

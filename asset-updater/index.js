@@ -2,7 +2,7 @@ const util = require('util')
 const path = require('path')
 const { readdir, readFile, exists } = require('fs')
 const { Firestore } = require('@google-cloud/firestore');
-const ASSETS_DIR = '../assets'
+const ASSETS_DIR = '../blockchains'
 const PROJECTS_DIR = '../projects'
 
 
@@ -126,5 +126,5 @@ async function storeProjects(projects) {
 }
 
 console.log('STARGING ASSET AND PROJECT UPDATER')
-extractDirectoryContents(ASSETS_DIR).then(assets => storeAssets(assets));
+extractDirectoryContents(ASSETS_DIR).then(chains => storeAssets(chains));
 extractDirectoryContents(PROJECTS_DIR).then(projects => storeProjects(projects));

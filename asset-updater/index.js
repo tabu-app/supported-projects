@@ -25,7 +25,7 @@ async function extractDirectoryContents(TARGET_DIR) {
   } else {
 
     const filesContent = await Promise.all(files.map((file) => {
-      return util.promisify(readFile)(path.join(TARGET_DIR, file, 'index.json'), 'utf8');
+      return util.promisify(readFile)(path.join(TARGET_DIR, file), 'utf8');
     }));
 
     const fileMap = filesContent.map(fileValue => {

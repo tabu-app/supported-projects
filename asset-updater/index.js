@@ -45,8 +45,9 @@ async function storeAssets(chains) {
     firestore.runTransaction(async t => {
       const snapshot = await firestore.collection('assets').get()
       const assets = chains.map(chain => chain.assets)
-      console.log(`SNAPSHOT`, snapshot)
+  
       if (snapshot.exists) {
+        console.log(`SNAPSHOT EXISTS`)
         const updateSymbolList = chains.map(chain => chain.assets).map(asset => asset.symbol)
 
 
@@ -58,17 +59,19 @@ async function storeAssets(chains) {
           }
           return acc
         }, [])
-
+        console.log(`DELETING ASSETS`, deleteAssetList)
         await Promise.all(deleteAssetList.map(delAssetSymbol => {
           firestore.collection('assets')
             .doc(delAssetSymbol)
             .delete()
         }))
+        console.log(`ASSETS DELETED`)
       }
 
-
+      console.log(`SAVING ASSETS`)
       await Promise.all(assets.map(async asset => {
         const key = asset.symbol;
+        console.log(`SAVING ASSET`,)
         firestore.collection('assets')
           .doc(key)
           .set(asset)

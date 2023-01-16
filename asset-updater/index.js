@@ -2,7 +2,7 @@ const util = require('util')
 const path = require('path')
 const { readdir, readFile, exists } = require('fs')
 const { Firestore } = require('@google-cloud/firestore');
-const ASSETS_DIR = '../assets'
+const ASSETS_DIR = '../blockchains'
 const PROJECTS_DIR = '../projects'
 
 

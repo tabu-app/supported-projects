@@ -41,7 +41,7 @@ async function storeAssets(chains) {
     return
   }
   try {
-    console.log('SAVING ASSETS', chains)
+    console.log('SAVING ASSETS', JSON.stringify(chains))
     firestore.runTransaction(async t => {
       const snapshot = await firestore.collection('assets').get()
       const assets = chains.map(chain => chain.assets)
@@ -71,7 +71,7 @@ async function storeAssets(chains) {
       console.log(`SAVING ASSETS`)
       await Promise.all(assets.map(async asset => {
         const key = asset.symbol;
-        console.log(`SAVING ASSET`,)
+        console.log(`SAVING ASSET`, asset)
         firestore.collection('assets')
           .doc(key)
           .set(asset)

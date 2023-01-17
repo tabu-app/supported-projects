@@ -3,13 +3,14 @@
   "chainId": "juno-1",
   "type": "cosmos",
   "logo": "ADD",
-  "denom": "ujuno",
+  "denom": "juno",
   "prefix": "juno",
   "assets": [
     {
       "name": "Juno",
       "symbol": "JUNO",
       "baseDenom": "ujuno",
+      "denom": "juno",
       "cosmosHubId": "juno",
       "decimals": 6,
       "website": "https://www.junonetwork.io/",

@@ -3,12 +3,13 @@
   "chainId": "cosmoshub-4",
   "type": "cosmos",
   "logo": "ADD",
-  "denom": "uatom",
+  "denom": "atom",
   "prefix": "cosmos",
   "assets": [
     {
       "name": "Cosmos",
       "symbol": "ATOM",
+      "denom": "atom",
       "baseDenom": "uatom",
       "cosmosHubId": "cosmoshub",
       "decimals": 6,

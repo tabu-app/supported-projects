@@ -3,13 +3,14 @@
   "chainId": "umee-1",
   "type": "cosmos",
   "logo": "ADD",
-  "denom": "uumee",
+  "denom": "umee",
   "prefix": "umee",
   "assets": [
     {
       "name": "Umee",
       "symbol": "UMEE",
       "baseDenom": "uumee",
+      "denom": "umee",
       "cosmosHubId": "umee",
       "decimals": 6,
       "website": "https://umee.cc/",

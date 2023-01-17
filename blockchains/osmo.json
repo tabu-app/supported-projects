@@ -3,13 +3,14 @@
   "chainId": "osmosis-1",
   "type": "cosmos",
   "logo": "ADD",
-  "denom": "uosmo",
+  "denom": "osmo",
   "prefix": "osmo",
   "assets": [
     {
       "name": "Osmosis",
       "symbol": "OSMO",
       "baseDenom": "uosmo",
+      "denom": "osmo",
       "cosmosHubId": "osmosis",
       "decimals": 6,
       "website": "https://osmosis.zone/",

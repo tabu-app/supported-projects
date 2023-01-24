@@ -41,7 +41,43 @@ async function storeAssets(chains) {
     return
   }
   try {
-    console.log('SAVING ASSETS', JSON.stringify(chains))
+    console.log(`SAVING CHAINS`)
+    firestore.runTransaction(async t => {
+      const chainsSnapshot = await firestore.collection('chains').get()
+
+      if(chainsSnapshot.exists){
+        console.log(`Chain Exists`)
+        const chainIds = chains.map(chain => chain.chainId)
+        const docData = snapshot.docs.map(doc => doc.data());
+
+        const toBeDeletedChains = docData.reduce((acc, doc) => {
+          if (!chainIds.includes(doc.chainId)) {
+            acc.push(doc.chainId)
+          }
+          return acc
+        }, [])
+
+        console.log(`DELETING ASSETS`, toBeDeletedChains)
+        await Promise.all(toBeDeletedChains.map(chainId => {
+          firestore.collection('chains')
+            .doc(chainId)
+            .delete()
+        }))
+        console.log(`CHAINS DELETED`)
+      }
+      console.log(`SAVING CHAINS`)
+      await Promise.all(chains.map(async chain => {
+        
+        console.log(`SAVING CHAIN`, chain)
+        firestore.collection('chains')
+        .doc(chain.chainId)
+        .set({...chain})
+      }))
+
+      return t
+    })
+
+    console.log('SAVING ASSETS')
     firestore.runTransaction(async t => {
       const snapshot = await firestore.collection('assets').get()
 

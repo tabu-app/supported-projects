@@ -5,6 +5,8 @@
   "logo": "ADD",
   "denom": "juno",
   "prefix": "juno",
+  "rpc": "https://rpc-juno.whispernode.com",
+  "api": "https://api.juno.bh.rocks",
   "assets": [
     {
       "name": "Juno",

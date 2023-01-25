@@ -5,6 +5,8 @@
   "logo": "ADD",
   "denom": "osmo",
   "prefix": "osmo",
+  "rpc": "https://rpc.osmosis.zone",
+  "api": "https://lcd.osmosis.zone",
   "assets": [
     {
       "name": "Osmosis",

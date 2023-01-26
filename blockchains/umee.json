@@ -2,7 +2,7 @@
   "name": "Umee",
   "chainId": "umee-1",
   "type": "cosmos",
-  "logo": "ADD",
+  "logo": "https://storage.googleapis.com/umeedropzone/umee_logo.svg",
   "denom": "umee",
   "prefix": "umee",
   "rpc": "https://rpc.mainnet.network.umee.cc/",
@@ -21,7 +21,7 @@
       "description": "Umee is a layer one blockchain for cross chain communication and interoperability, built on the Cosmos SDK and powered by Tendermint Consensus along with a self sovereign validator network.",
       "link": "https://app.umee.cc/#/markets",
       "coinGeckoId": "umee",
-      "logo": "https://assets.coingecko.com/coins/images/20635/small/1Ab_Umee_Brand_Icon_Full_Color.png?1645018295"
+      "logo": "https://storage.googleapis.com/umeedropzone/umee_logo.svg"
     }
   ]
 }

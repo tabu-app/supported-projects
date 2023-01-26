@@ -2,7 +2,7 @@
   "name": "Ethereum",
   "chainId": "1",
   "type": "evm",
-  "logo": "ADD",
+  "logo": "https://storage.googleapis.com/umeedropzone/eth-logo.svg",
   "denom": "ETH",
   "prefix": "",
   "rpc": "",
@@ -21,7 +21,7 @@
       "description": "Wrapped Bitcoin is an ERC-20 token on the Ethereum blockchain that represents Bitcoin.",
       "link": "https://wbtc.network/",
       "coinGeckoId": "wrapped-bitcoin",
-      "logo": "https://assets.coingecko.com/coins/images/7598/small/wrapped_bitcoin_wbtc.png?1548822744"
+      "logo": "https://storage.googleapis.com/umeedropzone/bitcoin-btc-logo.svg"
     },
     {
       "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
@@ -36,7 +36,7 @@
       "description": "The world's first unbiased currency and leading decentralized stablecoin.",
       "link": "https://makerdao.com/",
       "coinGeckoId": "dai",
-      "logo": "https://assets.coingecko.com/coins/images/9956/small/4943.png?1636636734"
+      "logo": "https://storage.googleapis.com/umeedropzone/dai-logo.svg"
     }
   ]
 }

@@ -7,6 +7,36 @@
   "prefix": "osmo",
   "rpc": "https://rpc.osmosis.zone",
   "api": "https://lcd.osmosis.zone",
+  "bip44": {
+    "coinType": 118
+  },
+  "bech32Config": {
+    "bech32PrefixAccAddr": "osmo",
+    "bech32PrefixAccPub": "osmopub",
+    "bech32PrefixValAddr": "osmovaloper",
+    "bech32PrefixValPub": "osmovaloperpub",
+    "bech32PrefixConsAddr": "osmovalcons",
+    "bech32PrefixConsPub": "osmovalconspub"
+  },
+  "stakeCurrency": {
+    "coinDenom": "OSMO",
+    "coinMinimalDenom": "uosmo",
+    "coinDecimals": 6,
+    "coinGeckoId": "osmosis"
+  },
+  "feeCurrencies": [
+    {
+      "coinDenom": "OSMO",
+      "coinMinimalDenom": "uosmo",
+      "coinDecimals": 6,
+      "coinGeckoId": "osmosis",
+      "gasPriceStep": {
+        "low": 0,
+        "average": 0.025,
+        "high": 0.04
+      }
+    }
+  ],
   "assets": [
     {
       "name": "Osmosis",
@@ -21,7 +51,8 @@
       "description": "Osmosis is an automated market maker (AMM) built on Cosmos that enables cross-chain transactions through Inter-Blockchain Communication (IBC). This gives the protocol an added layer of interoperability and composability.",
       "link": "https://app.osmosis.zone/",
       "coinGeckoId": "osmosis",
-      "logo": "https://storage.googleapis.com/umeedropzone/osmosis.svg"
+      "logo": "https://storage.googleapis.com/umeedropzone/osmosis.svg",
+      "ethereum": "0x000000000000000000000000000000000000dEaD"
     }
   ]
 }

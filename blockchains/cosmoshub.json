@@ -7,6 +7,36 @@
   "prefix": "cosmos",
   "rpc": "https://rpc-cosmoshub.blockapsis.com",
   "api": "https://cosmos-lcd.quickapi.com:443",
+  "bech32Config": {
+    "bech32PrefixAccAddr": "cosmos",
+    "bech32PrefixAccPub": "cosmospub",
+    "bech32PrefixConsAddr": "cosmosvalcons",
+    "bech32PrefixConsPub": "cosmosvalconspub",
+    "bech32PrefixValAddr": "cosmosvaloper",
+    "bech32PrefixValPub": "cosmosvaloperpub"
+  },
+  "bip44": {
+    "coinType": 118
+  },
+  "stakeCurrency": {
+    "coinDecimals": 6,
+    "coinDenom": "ATOM",
+    "coinGeckoId": "cosmos",
+    "coinMinimalDenom": "uatom"
+  },
+  "feeCurrencies": [
+    {
+      "coinDecimals": 6,
+      "coinDenom": "ATOM",
+      "coinGeckoId": "cosmos",
+      "coinMinimalDenom": "uatom",
+      "gasPriceStep": {
+        "average": 0.025,
+        "high": 0.03,
+        "low": 0.01
+      }
+    }
+  ],
   "assets": [
     {
       "name": "Cosmos",
@@ -21,7 +51,8 @@
       "description": "The Cosmos Hub is an Internet of Blockchains, a network of blockchains able to communicate with each other in a decentralized way.",
       "link": "https://cosmos.network/",
       "coinGeckoId": "cosmos",
-      "logo": "https://storage.googleapis.com/umeedropzone/cosmos-hub-logo.svg"
+      "logo": "https://storage.googleapis.com/umeedropzone/cosmos-hub-logo.svg",
+      "ethereum": "0x000000000000000000000000000000000000dEaD"
     }
   ]
 }

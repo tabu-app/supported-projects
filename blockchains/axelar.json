@@ -72,7 +72,7 @@
     },
     {
       "name": "Axelar DAI",
-      "symbol": "DAI",
+      "symbol": "axlDAI",
       "denom": "dai",
       "baseDenom": "dai-wei",
       "cosmosHubId": "axelar-dojo-1",

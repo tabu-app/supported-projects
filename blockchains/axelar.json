@@ -1,0 +1,58 @@
+{
+  "name": "Axelar",
+  "chainId": "axelar-dojo-1",
+  "type": "cosmos",
+  "logo": "https://storage.googleapis.com/umeedropzone/Axelar_Logo_Symbol_Black-min.png",
+  "denom": "axl",
+  "prefix": "axelar",
+  "rpc": "https://axelar-rpc.polkachu.com",
+  "api": "https://axelar-api.polkachu.com/",
+  "bip44": {
+    "coinType": 118
+  },
+  "bech32Config": {
+    "bech32PrefixAccAddr": "axelar",
+    "bech32PrefixAccPub": "axelarpub",
+    "bech32PrefixValAddr": "axelarvaloper",
+    "bech32PrefixValPub": "axelarvaloperpub",
+    "bech32PrefixConsAddr": "axelarvalcons",
+    "bech32PrefixConsPub": "axelarvalconspub"
+  },
+  "stakeCurrency": {
+    "coinDenom": "AXL",
+    "coinMinimalDenom": "uaxl",
+    "coinDecimals": 6,
+    "coinGeckoId": "axelar"
+  },
+  "feeCurrencies": [
+    {
+      "coinDenom": "AXL",
+      "coinMinimalDenom": "uaxl",
+      "coinDecimals": 6,
+      "coinGeckoId": "axelar",
+      "gasPriceStep": {
+        "low": 0.007,
+        "average": 0.007,
+        "high": 0.01
+      }
+    }
+  ],
+  "assets": [
+    {
+      "name": "Axelar",
+      "symbol": "AXL",
+      "denom": "axl",
+      "baseDenom": "uaxl",
+      "cosmosHubId": "axelar-dojo-1",
+      "decimals": 6,
+      "website": "https://axelar.network/",
+      "explorer": "https://axelarscan.io/",
+      "shortDescription": "Internet of Blockchains",
+      "description": "The Cosmos Hub is an Internet of Blockchains, a network of blockchains able to communicate with each other in a decentralized way.",
+      "link": "https://axelar.network/",
+      "coinGeckoId": "axelar",
+      "logo": "https://storage.googleapis.com/umeedropzone/Axelar_Logo_Symbol_Black-min.png",
+      "ethereum": "0x467719ad09025fcc6cf6f8311755809d45a5e5f3"
+    }
+  ]
+}

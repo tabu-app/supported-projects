@@ -12,7 +12,7 @@ const COSMOS_ASSET_SCHEMA = {
     name: { type: "string" },
     symbol: { type: "string" },
     baseDenom: { type: "string" },
-    denom: {type: "string"},
+    denom: { type: "string" },
     cosmosHubId: { type: "string" },
     decimals: { type: "integer" },
     website: { type: "string" },
@@ -22,6 +22,7 @@ const COSMOS_ASSET_SCHEMA = {
     link: { type: "string" },
     coinGeckoId: { type: "string" },
     logo: { type: "string" },
+    ethereum: { type: "string" },
   },
   required: [
     "name",
@@ -37,6 +38,7 @@ const COSMOS_ASSET_SCHEMA = {
     "link",
     "coinGeckoId",
     "logo",
+    "ethereum",
   ],
 };
 
@@ -95,6 +97,10 @@ const COSMOS_CHAIN_SCHEMA = {
     prefix: { type: "string" },
     rpc: { type: "string" },
     api: { type: "string" },
+    bip44: { type: "object" },
+    bech32Config: { type: "object" },
+    stakeCurrency: { type: "object" },
+    feeCurrencies: { type: "array" },
     assets: COSMOS_ARRAY_SCHEMA,
   },
 
@@ -107,6 +113,10 @@ const COSMOS_CHAIN_SCHEMA = {
     "prefix",
     "rpc",
     "api",
+    "bip44",
+    "bech32Config",
+    "stakeCurrency",
+    "feeCurrencies",
     "assets",
   ],
   additionalProperties: true,
@@ -167,6 +177,7 @@ function isValidAsset(obj: any): boolean {
         asset.link,
         asset.coinGeckoId,
         asset.logo,
+        asset.ethereum,
       ];
     } else {
       validProps = [

@@ -7,6 +7,46 @@
   "prefix": "juno",
   "rpc": "https://rpc-juno.whispernode.com",
   "api": "https://api.juno.bh.rocks",
+  "bip44": {
+    "coinType": 118
+  },
+  "bech32Config": {
+    "bech32PrefixAccAddr": "juno",
+    "bech32PrefixAccPub": "junopub",
+    "bech32PrefixValAddr": "junovaloper",
+    "bech32PrefixValPub": "junovaloperpub",
+    "bech32PrefixConsAddr": "junovalcons",
+    "bech32PrefixConsPub": "junovalconspub"
+  },
+  "stakeCurrency": {
+    "coinDenom": "JUNO",
+    "coinMinimalDenom": "ujuno",
+    "coinDecimals": 6,
+    "coinGeckoId": "juno-network"
+  },
+  "feeCurrencies": [
+    {
+      "coinDenom": "JUNO",
+      "coinMinimalDenom": "ujuno",
+      "coinDecimals": 6,
+      "coinGeckoId": "juno-network",
+      "gasPriceStep": {
+        "low": 0.001,
+        "average": 0.0025,
+        "high": 0.004
+      }
+    },
+    {
+      "coinDenom": "ATOM",
+      "coinMinimalDenom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
+      "coinDecimals": 6,
+      "gasPriceStep": {
+        "low": 0.00033,
+        "average": 0.0008250000000000001,
+        "high": 0.00132
+      }
+    }
+  ],
   "assets": [
     {
       "name": "Juno",
@@ -21,7 +61,8 @@
       "description": "Use & create interoperable applications on Juno. A decentralized, public, permission-less network for cross-chain smart contracts.",
       "link": "https://www.junonetwork.io/",
       "coinGeckoId": "juno-network",
-      "logo": "https://storage.googleapis.com/umeedropzone/juno.svg"
+      "logo": "https://storage.googleapis.com/umeedropzone/juno.svg",
+      "ethereum": "0x000000000000000000000000000000000000dEaD"
     }
   ]
 }

@@ -56,7 +56,7 @@
     },
     {
       "name": "Axelar USDC",
-      "symbol": "axlUSDC",
+      "symbol": "AXLUSDC",
       "denom": "USDC",
       "baseDenom": "uusdc",
       "cosmosHubId": "axelar-dojo-1",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Axelar DAI",
-      "symbol": "axlDAI",
+      "symbol": "AXLDAI",
       "denom": "dai",
       "baseDenom": "dai-wei",
       "cosmosHubId": "axelar-dojo-1",

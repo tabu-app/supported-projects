@@ -56,7 +56,7 @@
     },
     {
       "name": "Axelar USDC",
-      "symbol": "axlUSDC",
+      "symbol": "AXLUSDC",
       "denom": "USDC",
       "baseDenom": "uusdc",
       "cosmosHubId": "axelar-dojo-1",
@@ -66,13 +66,13 @@
       "shortDescription": "Axelar powers the Cross-Chain future",
       "description": "Axelar delivers secure cross-chain communication for Web3. Our infrastructure enables dApp users to interact with any asset or application, on any chain, with one click.",
       "link": "https://axelar.network/",
-      "coinGeckoId": "axlusdc",
+      "coinGeckoId": "usd-coin",
       "logo": "https://storage.googleapis.com/umeedropzone/uausdc%20D.svg",
-      "ethereum": "0x1b6382dbdea11d97f24495c9a90b7c88469134a4"
+      "ethereum": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
     },
     {
       "name": "Axelar DAI",
-      "symbol": "axlDAI",
+      "symbol": "AXLDAI",
       "denom": "dai",
       "baseDenom": "dai-wei",
       "cosmosHubId": "axelar-dojo-1",
@@ -82,9 +82,9 @@
       "shortDescription": "Axelar powers the Cross-Chain future",
       "description": "Axelar delivers secure cross-chain communication for Web3. Our infrastructure enables dApp users to interact with any asset or application, on any chain, with one click.",
       "link": "https://axelar.network/",
-      "coinGeckoId": "axelar",
+      "coinGeckoId": "dai",
       "logo": "https://storage.googleapis.com/umeedropzone/dai-wei%20D.svg",
-      "ethereum": "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+      "ethereum": "0x6b175474e89094c44da98b954eedeac495271d0f"
     }
   ]
 }

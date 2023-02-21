@@ -6,6 +6,7 @@
   "author": "@UmeeAndrey @dreamcodez",
   "license": "MIT",
   "dependencies": {
-    "@google-cloud/firestore": "^6.4.1"
+    "@google-cloud/firestore": "^6.4.1",
+    "lodash": "^4.17.21"
   }
 }

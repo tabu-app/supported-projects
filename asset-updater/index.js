@@ -1,8 +1,9 @@
 const util = require("util");
 const path = require("path");
+const { isEqual } = require("lodash");
+
 const { readdir, readFile, exists } = require("fs");
 const { Firestore } = require("@google-cloud/firestore");
-const fetch = require("node-fetch");
 const ASSETS_DIR = "../blockchains";
 const PROJECTS_DIR = "../projects";
 
@@ -36,159 +37,109 @@ async function extractDirectoryContents(TARGET_DIR) {
     return fileMap;
   }
 }
+
 async function storeAssets(chains) {
   if (!chains || !chains.length > 0) {
     return;
   }
+
   try {
     console.log(`SAVING CHAINS`);
-    firestore.runTransaction(async (t) => {
+    await firestore.runTransaction(async (t) => {
       const chainsSnapshot = await firestore.collection("chains").get();
+      const existingChains = new Map(
+        chainsSnapshot.docs.map((doc) => [doc.data().chainId, doc.data()])
+      );
 
-      if (chainsSnapshot.exists) {
-        console.log(`Chain Exists`);
-        const chainIds = chains.map((chain) => chain.chainId);
-        const docData = snapshot.docs.map((doc) => doc.data());
+      const { newChains, updatedChains, deletedChains } = getChainDiff(
+        chains,
+        existingChains
+      );
 
-        const toBeDeletedChains = docData.reduce((acc, doc) => {
-          if (!chainIds.includes(doc.chainId)) {
-            acc.push(doc.chainId);
-          }
-          return acc;
-        }, []);
-
-        console.log(`DELETING ASSETS`, toBeDeletedChains);
-        await Promise.all(
-          toBeDeletedChains.map((chainId) => {
-            firestore.collection("chains").doc(chainId).delete();
-          })
-        );
-        console.log(`CHAINS DELETED`);
-      }
-      console.log(`SAVING CHAINS`);
       await Promise.all(
-        chains.map(async (chain) => {
-          //console.log(`SAVING CHAIN`, chain);
-          firestore
-            .collection("chains")
-            .doc(chain.chainId)
-            .set({ ...chain });
-        })
+        newChains.map((chain) =>
+          firestore.collection("chains").doc(chain.chainId).set(chain)
+        )
+      );
+
+      await Promise.all(
+        updatedChains.map((chain) =>
+          firestore.collection("chains").doc(chain.chainId).update(chain)
+        )
+      );
+
+      await Promise.all(
+        deletedChains.map((chainId) =>
+          firestore.collection("chains").doc(chainId).delete()
+        )
       );
 
       return t;
     });
 
     console.log("SAVING ASSETS");
-    firestore.runTransaction(async (t) => {
-      const snapshot = await firestore.collection("assets").get();
+    await firestore.runTransaction(async (t) => {
+      const assetsSnapshot = await firestore.collection("assets").get();
+      const existingAssets = new Set(
+        assetsSnapshot.docs.map((doc) => doc.data().symbol)
+      );
 
-      if (snapshot.exists) {
-        console.log(`SNAPSHOT EXISTS`);
-        const updateSymbolList = chains
-          .map((chain) => chain.assets)
-          .map((asset) => asset.symbol.toUpperCase());
+      const newAssets = getNewAssets(chains, existingAssets);
 
-        const docData = snapshot.docs.map((doc) => doc.data());
-
-        const deleteAssetList = docData.reduce((acc, doc) => {
-          if (!updateSymbolList.includes(doc.symbol)) {
-            acc.push(doc.symbol);
-          }
-          return acc;
-        }, []);
-        console.log(`DELETING ASSETS`, deleteAssetList);
-        await Promise.all(
-          deleteAssetList.map((delAssetSymbol) => {
-            firestore.collection("assets").doc(delAssetSymbol).delete();
-          })
-        );
-        console.log(`ASSETS DELETED`);
-      }
-
-      console.log(`SAVING ASSETS`);
       await Promise.all(
-        chains.map(async (chain) => {
-          //console.log(`SAVING ASSET`, chain);
-          const chainId = chain.chainId;
-
-          if (chain.assets.length) {
-            chain.assets.forEach((asset) => {
-              const key = asset.symbol;
-              firestore
-                .collection("assets")
-                .doc(key)
-                .set({ ...asset, chainId });
-            });
-          }
-        })
+        Array.from(newAssets.values()).map((asset) =>
+          firestore.collection("assets").doc(asset.symbol).set(asset)
+        )
       );
 
       return t;
     });
-
-    console.log("SAVING CHART DATA");
-    firestore.runTransaction(async (t) => {
-      const snapshot = await firestore.collection("chart-data").get();
-
-      if (snapshot.exists) {
-        console.log(`SNAPSHOT EXISTS`);
-        const updateSymbolList = chains
-          .map((chain) => chain.assets)
-          .map((asset) => asset.symbol.toUpperCase());
-
-        const docData = snapshot.docs.map((doc) => doc.data());
-
-        const deleteAssetList = docData.reduce((acc, doc) => {
-          if (!updateSymbolList.includes(doc.symbol)) {
-            acc.push(doc.symbol);
-          }
-          return acc;
-        }, []);
-        console.log(`DELETING ASSETS`, deleteAssetList);
-        await Promise.all(
-          deleteAssetList.map((delAssetSymbol) => {
-            firestore.collection("chart-data").doc(delAssetSymbol).delete();
-          })
-        );
-        console.log(`ASSETS DELETED`);
-      }
-
-      console.log(`SAVING ASSETS`);
-      await Promise.all(
-        chains.map(async (chain) => {
-          //console.log(`SAVING ASSET`, chain);
-          const chainId = chain.chainId;
-
-          if (chain.assets.length) {
-            chain.assets.forEach((asset) => {
-              const key = asset.symbol;
-              firestore.collection("chart-data").doc(key).set({});
-            });
-          }
-        })
-      );
-
-      return t;
-    });
-
-    //call init endpoint "https://tabu-price-feeder-udedp6bvnq-uc.a.run.app"
-
-    const initResponse = await fetch(
-      "https://tabu-price-feeder-udedp6bvnq-uc.a.run.app/api/init",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    ).then((res) => res.json());
-
-    console.log("Initialize Firestore Data Successful: ", initResponse);
   } catch (e) {
     console.log(`Transaction failure`, e);
   }
 }
+
+function getChainDiff(newChains, existingChains) {
+  const newChainIds = new Set(newChains.map((chain) => chain.chainId));
+  const existingChainIds = new Set(existingChains.keys());
+
+  const newChainsMap = new Map(
+    newChains.map((chain) => [chain.chainId, chain])
+  );
+  const updatedChains = [];
+  const deletedChains = [];
+
+  for (const chainId of existingChainIds) {
+    if (!newChainIds.has(chainId)) {
+      deletedChains.push(chainId);
+    } else if (
+      !isEqual(existingChains.get(chainId), newChainsMap.get(chainId))
+    ) {
+      updatedChains.push(newChainsMap.get(chainId));
+    }
+  }
+
+  const newChainsArray = newChains.filter(
+    (chain) => !existingChainIds.has(chain.chainId)
+  );
+
+  return { newChains: newChainsArray, updatedChains, deletedChains };
+}
+
+function getNewAssets(chains, existingAssets) {
+  const newAssets = new Map();
+
+  for (const chain of chains) {
+    for (const asset of chain.assets) {
+      if (!existingAssets.has(asset.symbol)) {
+        newAssets.set(asset.symbol, { ...asset, chainId: chain.chainId });
+      }
+    }
+  }
+
+  return newAssets;
+}
+
 async function storeProjects(projects) {
   if (!projects || projects.length < 1) {
     return;

@@ -171,20 +171,6 @@ async function storeAssets(chains) {
 
       return t;
     });
-
-    //call init endpoint "https://tabu-price-feeder-udedp6bvnq-uc.a.run.app"
-
-    const initResponse = await fetch(
-      "https://tabu-price-feeder-udedp6bvnq-uc.a.run.app/api/init",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    ).then((res) => res.json());
-
-    console.log("Initialize Firestore Data Successful: ", initResponse);
   } catch (e) {
     console.log(`Transaction failure`, e);
   }

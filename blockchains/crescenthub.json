@@ -1,0 +1,72 @@
+{
+    "name": "Crescent Hub",
+    "chainId": "crescent-1",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/umeedropzone/crescent_logo.svg",
+    "denom": "cre",
+    "prefix": "cre",
+    "rpc": "https://mainnet.crescent.network:26657",
+    "api": "https://mainnet.crescent.network:1317",
+    "bip44": {
+      "coinType": 118
+    },
+    "bech32Config": {
+      "bech32PrefixAccAddr": "cre",
+      "bech32PrefixAccPub": "crepub",
+      "bech32PrefixValAddr": "crevaloper",
+      "bech32PrefixValPub": "crevaloperpub",
+      "bech32PrefixConsAddr": "crevalcons",
+      "bech32PrefixConsPub": "crevalconspub"
+    },
+    "stakeCurrency": {
+      "coinDenom": "CRE",
+      "coinMinimalDenom": "ucre",
+      "coinDecimals": 6
+    },
+    "feeCurrencies": [
+      {
+        "coinDenom": "CRE",
+        "coinMinimalDenom": "ucre",
+        "coinDecimals": 6,
+        "gasPriceStep": {
+          "low": 0.01,
+          "average": 0.025,
+          "high": 0.03
+        }
+      }
+    ],
+    "assets": [
+      {
+        "name": "Crescent",
+        "symbol": "CRE",
+        "baseDenom": "ucre",
+        "denom": "cre",
+        "cosmosHubId": "crescent",
+        "decimals": 6,
+        "website": "https://crescent.network/",
+        "explorer": "https://www.mintscan.io/crescent",
+        "shortDescription": "Crescent is a DeFi Hub that invites users on a journey to explore limitless possibilities of digital assets by unifying various blockchains in ways unseen in the Cosmos ecosystem.",
+        "description": "Crescent is a DeFi Hub that invites users on a journey to explore limitless possibilities of digital assets by unifying various blockchains in ways unseen in the Cosmos ecosystem.",
+        "link": "https://app.crescent.network/swap",
+        "coinGeckoId": "crescent-network",
+        "logo": "https://storage.googleapis.com/umeedropzone/crescent_logo.svg",
+        "ethereum": "0x000000000000000000000000000000000000dEaD"
+      },
+      {
+        "name": "Crescent",
+        "symbol": "bCRE",
+        "baseDenom": "ubcre",
+        "denom": "bcre",
+        "cosmosHubId": "crescent",
+        "decimals": 6,
+        "website": "https://crescent.network/",
+        "explorer": "https://www.mintscan.io/crescent",
+        "shortDescription": "Crescent is a DeFi Hub that invites users on a journey to explore limitless possibilities of digital assets by unifying various blockchains in ways unseen in the Cosmos ecosystem.",
+        "description": "Crescent is a DeFi Hub that invites users on a journey to explore limitless possibilities of digital assets by unifying various blockchains in ways unseen in the Cosmos ecosystem.",
+        "link": "https://app.crescent.network/swap",
+        "coinGeckoId": "liquid-staking-crescent",
+        "logo": "https://storage.googleapis.com/umeedropzone/bcre.svg",
+        "ethereum": "0x000000000000000000000000000000000000dEaD"
+      }
+    ]
+  }

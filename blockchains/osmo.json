@@ -2,7 +2,7 @@
   "name": "Osmosis",
   "chainId": "osmosis-1",
   "type": "cosmos",
-  "logo": "https://storage.googleapis.com/umeedropzone/osmosis.svg",
+  "logo": "https://storage.googleapis.com/umeedropzone/osmo.png",
   "denom": "osmo",
   "prefix": "osmo",
   "rpc": "https://rpc.osmosis.zone",
@@ -51,7 +51,7 @@
       "description": "Osmosis is an automated market maker (AMM) built on Cosmos that enables cross-chain transactions through Inter-Blockchain Communication (IBC). This gives the protocol an added layer of interoperability and composability.",
       "link": "https://app.osmosis.zone/",
       "coinGeckoId": "osmosis",
-      "logo": "https://storage.googleapis.com/umeedropzone/osmosis.svg",
+      "logo": "https://storage.googleapis.com/umeedropzone/osmo.png",
       "ethereum": "0x000000000000000000000000000000000000dEaD"
     }
   ]

@@ -123,6 +123,7 @@ function getChainDiff(newChains, existingChains) {
     (chain) => !existingChainIds.has(chain.chainId)
   );
 
+
   return { newChains: newChainsArray, updatedChains, deletedChains };
 }
 
@@ -135,6 +136,7 @@ function getNewAssets(chains, existingAssets) {
         newAssets.set(asset.symbol, { ...asset, chainId: chain.chainId });
       }
     }
+
   }
 
   return newAssets;

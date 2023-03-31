@@ -5,8 +5,8 @@
   "logo": "https://storage.googleapis.com/umeedropzone/1Ab_Umee_Brand%20Icon%20Full%20Color.png",
   "denom": "umee",
   "prefix": "umee",
-  "rpc": "https://rpc.mainnet.network.umee.cc/",
-  "api": "https://api.mainnet.network.umee.cc",
+  "rpc": "https://umee-rpc.polkachu.com/",
+  "api": "https://umee-api.polkachu.com/",
   "bip44": {
     "coinType": 118
   },

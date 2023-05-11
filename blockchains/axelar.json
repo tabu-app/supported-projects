@@ -2,7 +2,7 @@
   "name": "Axelar",
   "chainId": "axelar-dojo-1",
   "type": "cosmos",
-  "logo": "https://storage.googleapis.com/umeedropzone/959f5978-d237-4ec4-8613-efdd8d68efdd-1666262664-f2868ddc3ffd9a24878c5e7496a389d5412dad83.png",
+  "logo": "https://storage.googleapis.com/tabu-asset-images/axelar-logo.png",
   "denom": "axl",
   "prefix": "axelar",
   "rpc": "https://axelar-rpc.polkachu.com",
@@ -51,7 +51,7 @@
       "description": "Axelar delivers secure cross-chain communication for Web3. Our infrastructure enables dApp users to interact with any asset or application, on any chain, with one click.",
       "link": "https://axelar.network/",
       "coinGeckoId": "axelar",
-      "logo": "https://storage.googleapis.com/umeedropzone/959f5978-d237-4ec4-8613-efdd8d68efdd-1666262664-f2868ddc3ffd9a24878c5e7496a389d5412dad83.png",
+      "logo": "https://storage.googleapis.com/tabu-asset-images/axelar-logo.png",
       "ethereum": "0x467719ad09025fcc6cf6f8311755809d45a5e5f3"
     },
     {
@@ -67,7 +67,7 @@
       "description": "Axelar delivers secure cross-chain communication for Web3. Our infrastructure enables dApp users to interact with any asset or application, on any chain, with one click.",
       "link": "https://axelar.network/",
       "coinGeckoId": "usd-coin",
-      "logo": "https://storage.googleapis.com/umeedropzone/usd-coin-usdc-logo.png",
+      "logo": "https://storage.googleapis.com/tabu-asset-images/usdc-coin-logo.png",
       "ethereum": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
     },
     {
@@ -83,7 +83,7 @@
       "description": "Axelar delivers secure cross-chain communication for Web3. Our infrastructure enables dApp users to interact with any asset or application, on any chain, with one click.",
       "link": "https://axelar.network/",
       "coinGeckoId": "dai",
-      "logo": "https://storage.googleapis.com/umeedropzone/dai-wei%20D.svg",
+      "logo": "https://storage.googleapis.com/tabu-asset-images/dai-wei-logo.png",
       "ethereum": "0x6b175474e89094c44da98b954eedeac495271d0f"
     }
   ]

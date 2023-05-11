@@ -2,7 +2,7 @@
   "name": "Cosmos Hub",
   "chainId": "cosmoshub-4",
   "type": "cosmos",
-  "logo": "https://storage.cloud.google.com/tabu-asset-images/cosmos-atom-logo.png",
+  "logo": "https://storage.googleapis.com/tabu-asset-images/cosmos-atom-logo.png",
   "denom": "atom",
   "prefix": "cosmos",
   "rpc": "https://rpc-cosmoshub.blockapsis.com",
@@ -51,7 +51,7 @@
       "description": "The Cosmos Hub is an Internet of Blockchains, a network of blockchains able to communicate with each other in a decentralized way.",
       "link": "https://cosmos.network/",
       "coinGeckoId": "cosmos",
-      "logo": "https://storage.cloud.google.com/tabu-asset-images/cosmos-atom-logo.png",
+      "logo": "https://storage.googleapis.com/tabu-asset-images/cosmos-atom-logo.png",
       "ethereum": "0x000000000000000000000000000000000000dEaD"
     }
   ]

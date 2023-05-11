@@ -2,7 +2,7 @@
     "name": "Crescent",
     "chainId": "crescent-1",
     "type": "cosmos",
-    "logo": "https://storage.googleapis.com/umeedropzone/crescent_logo.svg",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/crescent-logo.png",
     "denom": "cre",
     "prefix": "cre",
     "rpc": "https://mainnet.crescent.network",
@@ -49,7 +49,7 @@
         "description": "Crescent is a DeFi Hub that invites users on a journey to explore limitless possibilities of digital assets by unifying various blockchains in ways unseen in the Cosmos ecosystem.",
         "link": "https://app.crescent.network/swap",
         "coinGeckoId": "crescent-network",
-        "logo": "https://storage.googleapis.com/umeedropzone/crescent_logo.svg",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/crescent-logo.png",
         "ethereum": "0x000000000000000000000000000000000000dEaD"
       },
       {
@@ -65,7 +65,7 @@
         "description": "Crescent is a DeFi Hub that invites users on a journey to explore limitless possibilities of digital assets by unifying various blockchains in ways unseen in the Cosmos ecosystem.",
         "link": "https://app.crescent.network/swap",
         "coinGeckoId": "liquid-staking-crescent",
-        "logo": "https://storage.googleapis.com/umeedropzone/bcre.svg",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/bcre-logo.png",
         "ethereum": "0x000000000000000000000000000000000000dEaD"
       }
     ]

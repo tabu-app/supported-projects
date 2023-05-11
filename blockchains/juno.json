@@ -2,7 +2,7 @@
   "name": "Juno",
   "chainId": "juno-1",
   "type": "cosmos",
-  "logo": "https://storage.googleapis.com/umeedropzone/communityIcon_qf9b0aco7g881.png",
+  "logo": "https://storage.googleapis.com/tabu-asset-images/juno-logo.png",
   "denom": "juno",
   "prefix": "juno",
   "rpc": "https://rpc-juno.whispernode.com",
@@ -61,7 +61,7 @@
       "description": "Use & create interoperable applications on Juno. A decentralized, public, permission-less network for cross-chain smart contracts.",
       "link": "https://www.junonetwork.io/",
       "coinGeckoId": "juno-network",
-      "logo": "https://storage.googleapis.com/umeedropzone/communityIcon_qf9b0aco7g881.png",
+      "logo": "https://storage.googleapis.com/tabu-asset-images/juno-logo.png",
       "ethereum": "0x000000000000000000000000000000000000dEaD"
     }
   ]

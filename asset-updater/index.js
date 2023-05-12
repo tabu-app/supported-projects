@@ -100,7 +100,7 @@ async function storeAssets(chains) {
         console.log(`DELETING ASSETS`, deleteAssetList);
         await Promise.all(
           deleteAssetList.map((delAssetSymbol) => {
-            firestore.collection("assets").doc(delAssetSymbol).delete();
+            firestore.collection("assets").doc(delAssetSymbol.toUpperCase()).delete();
           })
         );
         console.log(`ASSETS DELETED`);
@@ -117,7 +117,7 @@ async function storeAssets(chains) {
               const key = asset.symbol;
               firestore
                 .collection("assets")
-                .doc(key)
+                .doc(key.toUpperCase())
                 .set({ ...asset, chainId });
             });
           }

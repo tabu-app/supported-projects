@@ -1,0 +1,59 @@
+{
+    "name": "Akash",
+    "chainId": "akashnet-2",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/akash-logo.png",
+    "denom": "akt",
+    "prefix": "akash",
+    "rpc": "https://akash-rpc.polkachu.com",
+    "api": "https://akash-api.polkachu.com/",
+    "bip44": {
+      "coinType": 118
+    },
+    "bech32Config": {
+      "bech32PrefixAccAddr": "akash",
+      "bech32PrefixAccPub": "akashpub",
+      "bech32PrefixValAddr": "akashvaloper",
+      "bech32PrefixValPub": "akashvaloperpub",
+      "bech32PrefixConsAddr": "akashvalcons",
+      "bech32PrefixConsPub": "akashvalconspub"
+    },
+    "stakeCurrency": {
+      "coinDenom": "akt",
+      "coinMinimalDenom": "uakt",
+      "coinDecimals": 6,
+      "coinGeckoId": "akash-network"
+    },
+    "feeCurrencies": [
+      {
+        "coinDenom": "akt",
+        "coinMinimalDenom": "uakt",
+        "coinDecimals": 6,
+        "coinGeckoId": "akash-network",
+        "gasPriceStep": {
+          "low": 0.00025,
+          "average": 0.0025,
+          "high": 0.025
+        }
+      }
+    ],
+    "assets": [
+      {
+        "name": "Akash",
+        "symbol": "AKASH",
+        "denom": "akt",
+        "baseDenom": "uakt",
+        "cosmosHubId": "akashnet-2",
+        "decimals": 6,
+        "website": "https://akash.network/",
+        "explorer": "https://akash.aneka.io/",
+        "shortDescription": "Sovereign Infrastructure That Scales",
+        "description": "Akash is an open network that lets users buy and sell computing resources securely and efficiently. Purpose-built for public utility.",
+        "link": "https://akash.network/",
+        "coinGeckoId": "akash-network",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/akash-logo.png",
+        "ethereum": "0xC727f87871ee12Bbcedd2973746D1Deb7529aaD6"
+      }
+    ]
+  }
+  

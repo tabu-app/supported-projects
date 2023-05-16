@@ -1,0 +1,59 @@
+{
+    "name": "Gravity Bridge",
+    "chainId": "gravity-bridge-3",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/gravity-bridge-logo.png",
+    "denom": "graviton",
+    "prefix": "graviton",
+    "rpc": "https://akash-rpc.polkachu.com",
+    "api": "https://akash-api.polkachu.com/",
+    "bip44": {
+      "coinType": 118
+    },
+    "bech32Config": {
+      "bech32PrefixAccAddr": "gravity",
+      "bech32PrefixAccPub": "gravitypub",
+      "bech32PrefixValAddr": "gravityvaloper",
+      "bech32PrefixValPub": "gravityvaloperpub",
+      "bech32PrefixConsAddr": "gravityvalcons",
+      "bech32PrefixConsPub": "gravityvalconspub"
+    },
+    "stakeCurrency": {
+      "coinDenom": "graviton",
+      "coinMinimalDenom": "ugraviton",
+      "coinDecimals": 6,
+      "coinGeckoId": "graviton"
+    },
+    "feeCurrencies": [
+      {
+        "coinDenom": "graviton",
+        "coinMinimalDenom": "ugraviton",
+        "coinDecimals": 6,
+        "coinGeckoId": "graviton",
+        "gasPriceStep": {
+          "low": 0.0,
+          "average": 0.0,
+          "high": 0.0
+        }
+      }
+    ],
+    "assets": [
+      {
+        "name": "Gravitron",
+        "symbol": "GRAV",
+        "denom": "graviton",
+        "baseDenom": "ugraviton",
+        "cosmosHubId": "gravity-bridge-3",
+        "decimals": 6,
+        "website": "https://www.gravitybridge.net",
+        "explorer": "https://atomscan.com/gravity-bridge",
+        "shortDescription": "An open, decentralized bridge that unlocks the power of interoperability & liquidity between blockchain ecosystems.",
+        "description": "Gravity Bridge chain will act as neutral ethereum to cosmos bridge. Through IBC(Interblockchain communication), many different cosmos based projects can connect and use the bridge to access ERC20 assets, like dai or usdc, without having to operate the gravity orchestrator on their own chain.",
+        "link": "https://www.gravitybridge.net",
+        "coinGeckoId": "graviton",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/grabity-bridge-logo.png",
+        "ethereum": ""
+      }
+    ]
+  }
+  

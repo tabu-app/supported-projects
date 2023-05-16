@@ -5,8 +5,8 @@
     "logo": "https://storage.googleapis.com/tabu-asset-images/crescent-logo.png",
     "denom": "cre",
     "prefix": "cre",
-    "rpc": "https://mainnet.crescent.network",
-    "api": "https://mainnet.crescent.network",
+    "rpc": "https://crescent-rpc.polkachu.com",
+    "api": "https://crescent-api.polkachu.com",
     "bip44": {
       "coinType": 118
     },

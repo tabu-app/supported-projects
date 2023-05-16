@@ -68,11 +68,11 @@ async function storeAssets(chains) {
       console.log(`SAVING CHAINS`);
       await Promise.all(
         chains.map(async (chain) => {
-          //console.log(`SAVING CHAIN`, chain);
+          console.log(`SAVING CHAIN`, chain);
           firestore
             .collection("chains")
             .doc(chain.chainId)
-            .set({ ...chain });
+            .set({ ...chain }, { merge: true });
         })
       );
 
@@ -118,7 +118,7 @@ async function storeAssets(chains) {
               firestore
                 .collection("assets")
                 .doc(key.toUpperCase())
-                .set({ ...asset, chainId });
+                .set({ ...asset, chainId }, {merge: true});
             });
           }
         })
@@ -127,50 +127,6 @@ async function storeAssets(chains) {
       return t;
     });
 
-    console.log("SAVING CHART DATA");
-    firestore.runTransaction(async (t) => {
-      const snapshot = await firestore.collection("chart-data").get();
-
-      if (snapshot.exists) {
-        console.log(`SNAPSHOT EXISTS`);
-        const updateSymbolList = chains
-          .map((chain) => chain.assets)
-          .map((asset) => asset.symbol.toUpperCase());
-
-        const docData = snapshot.docs.map((doc) => doc.data());
-
-        const deleteAssetList = docData.reduce((acc, doc) => {
-          if (!updateSymbolList.includes(doc.symbol)) {
-            acc.push(doc.symbol);
-          }
-          return acc;
-        }, []);
-        console.log(`DELETING ASSETS`, deleteAssetList);
-        await Promise.all(
-          deleteAssetList.map((delAssetSymbol) => {
-            firestore.collection("chart-data").doc(delAssetSymbol).delete();
-          })
-        );
-        console.log(`ASSETS DELETED`);
-      }
-
-      console.log(`SAVING ASSETS`);
-      await Promise.all(
-        chains.map(async (chain) => {
-          //console.log(`SAVING ASSET`, chain);
-          const chainId = chain.chainId;
-
-          if (chain.assets.length) {
-            chain.assets.forEach((asset) => {
-              const key = asset.symbol;
-              firestore.collection("chart-data").doc(key).set({});
-            });
-          }
-        })
-      );
-
-      return t;
-    });
   } catch (e) {
     console.log(`Transaction failure`, e);
   }

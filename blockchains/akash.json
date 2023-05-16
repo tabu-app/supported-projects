@@ -51,7 +51,8 @@
         "description": "Akash is an open network that lets users buy and sell computing resources securely and efficiently. Purpose-built for public utility.",
         "link": "https://akash.network/",
         "coinGeckoId": "akash-network",
-        "logo": "https://storage.googleapis.com/tabu-asset-images/akash-logo.png"
+        "logo": "https://storage.googleapis.com/tabu-asset-images/akash-logo.png",
+        "ethereum": "0xC727f87871ee12Bbcedd2973746D1Deb7529aaD6"
       }
     ]
   }

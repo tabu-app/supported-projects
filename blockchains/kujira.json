@@ -1,0 +1,58 @@
+{
+    "name": "Kujira",
+    "chainId": "kaiyo-1",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/kujira-logo.png",
+    "denom": "kujirad",
+    "prefix": "kujira",
+    "rpc": "https://kujira-rpc.polkachu.com/",
+    "api": "https://kujira-api.polkachu.com/",
+    "bip44": {
+        "coinType": 118
+    },
+    "bech32Config": {
+        "bech32PrefixAccAddr": "kujira",
+        "bech32PrefixAccPub": "kujirapub",
+        "bech32PrefixValAddr": "kujiravaloper",
+        "bech32PrefixValPub": "kujiravaloperpub",
+        "bech32PrefixConsAddr": "kujiravalcons",
+        "bech32PrefixConsPub": "kujiravalconspub"
+    },
+    "stakeCurrency": {
+        "coinDenom": "kuji",
+        "coinMinimalDenom": "ukuji",
+        "coinDecimals": 6,
+        "coinGeckoId": "kujira"
+    },
+    "feeCurrencies": [
+        {
+            "coinDenom": "kuji",
+            "coinMinimalDenom": "ukuji",
+            "coinDecimals": 6,
+            "coinGeckoId": "kujira",
+            "gasPriceStep": {
+                "low": 0.00119,
+                "average": 0.00119,
+                "high": 0.00119
+            }
+        }
+    ],
+    "assets": [
+        {
+            "name": "Kujira",
+            "symbol": "Kuji",
+            "baseDenom": "ukuji",
+            "denom": "kuji",
+            "cosmosHubId": "kujira",
+            "decimals": 6,
+            "website": "https://kujira.app/",
+            "explorer": "https://www.mintscan.io/kujira",
+            "shortDescription": "The Blockchain for Real Yield",
+            "description": "A decentralized ecosystem for protocols, builders and web3 users seeking sustainable FinTech.",
+            "link": "https://kujira.app/",
+            "coinGeckoId": "kujira",
+            "logo": "https://storage.googleapis.com/tabu-asset-images/kujira-logo.png",
+            "ethereum": "0x96543ef8d2C75C26387c1a319ae69c0BEE6f3fe7"
+        }
+    ]
+}

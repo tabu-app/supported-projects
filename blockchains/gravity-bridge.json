@@ -4,7 +4,7 @@
     "type": "cosmos",
     "logo": "https://storage.googleapis.com/tabu-asset-images/gravity-bridge-logo.png",
     "denom": "graviton",
-    "prefix": "graviton",
+    "prefix": "gravity",
     "rpc": "https://gravity-rpc.polkachu.com/",
     "api": "https://gravity-api.polkachu.com/",
     "bip44": {

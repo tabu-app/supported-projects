@@ -1,0 +1,58 @@
+{
+    "name": "Stargaze",
+    "chainId": "stargaze-1",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/stargaze-logo.png",
+    "denom": "starsd",
+    "prefix": "stars",
+    "rpc": "https://stargaze-rpc.polkachu.com/",
+    "api": "https://stargaze-api.polkachu.com/",
+    "bip44": {
+        "coinType": 118
+    },
+    "bech32Config": {
+        "bech32PrefixAccAddr": "stars",
+        "bech32PrefixAccPub": "starspub",
+        "bech32PrefixValAddr": "starsvaloper",
+        "bech32PrefixValPub": "starsvaloperpub",
+        "bech32PrefixConsAddr": "starsvalcons",
+        "bech32PrefixConsPub": "starsvalconspub"
+    },
+    "stakeCurrency": {
+        "coinDenom": "starsd",
+        "coinMinimalDenom": "ustars",
+        "coinDecimals": 6,
+        "coinGeckoId": "stargaze"
+    },
+    "feeCurrencies": [
+        {
+            "coinDenom": "starsd",
+            "coinMinimalDenom": "ustars",
+            "coinDecimals": 6,
+            "coinGeckoId": "stargaze",
+            "gasPriceStep": {
+                "low": 0.0,
+                "average": 0.0025,
+                "high": 0.005
+            }
+        }
+    ],
+    "assets": [
+        {
+            "name": "Stargaze",
+            "symbol": "STARS",
+            "baseDenom": "ustars",
+            "denom": "starsd",
+            "cosmosHubId": "stargaze",
+            "decimals": 6,
+            "website": "https://www.stargaze.zone/",
+            "explorer": "https://www.mintscan.io/stargaze",
+            "shortDescription": "The coolest and cleanest apes in the the cosmos.",
+            "description": "The coolest and cleanest apes in the the cosmos. Providing NFT utilities and use to holders. Join the Ape revolution and rule the digital jungle!",
+            "link": "https://www.stargaze.zone/",
+            "coinGeckoId": "stargaze",
+            "logo": "https://storage.googleapis.com/tabu-asset-images/stargaze-logo.png",
+            "ethereum": "IBC/987C17B11ABC2B20019178ACE62929FE9840202CE79498E29FE8E5CB02B7C0A4"
+        }
+    ]
+}

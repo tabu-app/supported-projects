@@ -1,0 +1,59 @@
+{
+    "name": "Quicksilver",
+    "chainId": "quicksilver-2",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/quicksilver-logo.png",
+    "denom": "qck",
+    "prefix": "quick",
+    "rpc": "https://quicksilver-rpc.polkachu.com/",
+    "api": "https://quicksilver-api.polkachu.com/",
+    "bip44": {
+      "coinType": 118
+    },
+    "bech32Config": {
+      "bech32PrefixAccAddr": "quick",
+      "bech32PrefixAccPub": "quickpub",
+      "bech32PrefixValAddr": "quickvaloper",
+      "bech32PrefixValPub": "quickvaloperpub",
+      "bech32PrefixConsAddr": "quickvalcons",
+      "bech32PrefixConsPub": "quickvalconspub"
+    },
+    "stakeCurrency": {
+      "coinDenom": "qck",
+      "coinMinimalDenom": "uqck",
+      "coinDecimals": 6,
+      "coinGeckoId": "quicksilver"
+    },
+    "feeCurrencies": [
+      {
+        "coinDenom": "qck",
+        "coinMinimalDenom": "uqck",
+        "coinDecimals": 6,
+        "coinGeckoId": "quicksilver",
+        "gasPriceStep": {
+          "low": 0.0001,
+          "average": 0.0001,
+          "high": 0.0001
+        }
+      }
+    ],
+    "assets": [
+      {
+        "name": "Quicksilver",
+        "symbol": "QCK",
+        "baseDenom": "uqck",
+        "denom": "qck",
+        "cosmosHubId": "quicksilver",
+        "decimals": 6,
+        "website": "https://quicksilver.zone/",
+        "explorer": "https://www.mintscan.io/quicksilver",
+        "shortDescription": "THE COSMOS LIQUID STAKING ZONE",
+        "description": "Quicksilver is the liquid staking zone custom built for Cosmos decentralization. Choose any validator, earn rewards, and vote with liquid staked assets.",
+        "link": "https://quicksilver.zone/",
+        "coinGeckoId": "quicksilver",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/quicksilver-logo.png",
+        "ethereum": "ibc/635CB83EF1DFE598B10A3E90485306FD0D47D34217A4BE5FD9977FA010A5367D"
+      }
+    ]
+  }
+  

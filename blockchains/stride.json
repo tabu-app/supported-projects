@@ -1,0 +1,59 @@
+{
+    "name": "Stride",
+    "chainId": "stride-1",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/stride-logo.png",
+    "denom": "strided",
+    "prefix": "stride",
+    "rpc": "https://stride-rpc.polkachu.com/",
+    "api": "https://stride-api.polkachu.com/",
+    "bip44": {
+      "coinType": 118
+    },
+    "bech32Config": {
+      "bech32PrefixAccAddr": "stride",
+      "bech32PrefixAccPub": "stridepub",
+      "bech32PrefixValAddr": "stridevaloper",
+      "bech32PrefixValPub": "stridevaloperpub",
+      "bech32PrefixConsAddr": "stridevalcons",
+      "bech32PrefixConsPub": "stridevalconspub"
+    },
+    "stakeCurrency": {
+      "coinDenom": "strd",
+      "coinMinimalDenom": "ustrd",
+      "coinDecimals": 6,
+      "coinGeckoId": "stride"
+    },
+    "feeCurrencies": [
+      {
+        "coinDenom": "strd",
+        "coinMinimalDenom": "ustrd",
+        "coinDecimals": 6,
+        "coinGeckoId": "stride",
+        "gasPriceStep": {
+          "low": 0.0,
+          "average": 0.0,
+          "high": 0.0
+        }
+      }
+    ],
+    "assets": [
+      {
+        "name": "Stride",
+        "symbol": "STRD",
+        "baseDenom": "ustrd",
+        "denom": "strd",
+        "cosmosHubId": "stride",
+        "decimals": 6,
+        "website": "https://stride.zone/",
+        "explorer": "https://www.mintscan.io/stride",
+        "shortDescription": "Join 50K+ Cosmonauts who use Stride. Secure the Cosmos. Unlock liquidity and earn more yield.",
+        "description": "Stride is a liquid staking protocol that unlocks the liquidity for staked assets in the IBC ecosystem.",
+        "link": "https://stride.zone/",
+        "coinGeckoId": "stride",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/stride-logo.png",
+        "ethereum": "ibc/A8CA5EE328FA10C9519DF6057DA1F69682D28F7D0F5CCC7ECB72E3DCA2D157A4"
+      }
+    ]
+  }
+  

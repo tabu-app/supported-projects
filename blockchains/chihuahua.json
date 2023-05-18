@@ -1,0 +1,59 @@
+{
+    "name": "Chihuahua",
+    "chainId": "chihuahua-1",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/chihuahua-logo.png",
+    "denom": "chihuahuad",
+    "prefix": "chihuahua",
+    "rpc": "https://chihuahua-rpc.polkachu.com",
+    "api": "https://chihuahua-api.polkachu.com/",
+    "bip44": {
+      "coinType": 118
+    },
+    "bech32Config": {
+      "bech32PrefixAccAddr": "chihuahua",
+      "bech32PrefixAccPub": "chihuahuapub",
+      "bech32PrefixValAddr": "chihuahuavaloper",
+      "bech32PrefixValPub": "chihuahuavaloperpub",
+      "bech32PrefixConsAddr": "chihuahuavalcons",
+      "bech32PrefixConsPub": "chihuahuavalconspub"
+    },
+    "stakeCurrency": {
+      "coinDenom": "huahua",
+      "coinMinimalDenom": "uhuahua",
+      "coinDecimals": 6,
+      "coinGeckoId": "chihuahua"
+    },
+    "feeCurrencies": [
+      {
+        "coinDenom": "huahua",
+        "coinMinimalDenom": "uhuahua",
+        "coinDecimals": 6,
+        "coinGeckoId": "chihuahua",
+        "gasPriceStep": {
+          "low": 0.00035,
+          "average": 0.00035,
+          "high": 0.00035
+        }
+      }
+    ],
+    "assets": [
+      {
+        "name": "Chihuahua",
+        "symbol": "HUAHUA",
+        "denom": "huahua",
+        "baseDenom": "uhuahua",
+        "cosmosHubId": "chihuahua",
+        "decimals": 6,
+        "website": "https://www.chihuahua.wtf/",
+        "explorer": "https://mintscan.io/chihuahua",
+        "shortDescription": "The first meme coin on Cosmos ecosystem.",
+        "description": "Chihuahua is the first interoperable meme coin with a POS blockchain, making it one of the most utilized chains in the Cosmos ecosystem.",
+        "link": "https://www.chihuahua.wtf/",
+        "coinGeckoId": "chihuahua",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/chihuahua-logo.png",
+        "ethereum": "IBC/B9E0A1A524E98BB407D3CED8720EFEFD186002F90C1B1B7964811DD0CCC12228"
+      }
+    ]
+  }
+  

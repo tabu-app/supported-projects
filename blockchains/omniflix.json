@@ -1,0 +1,59 @@
+{
+    "name": "Omniflix",
+    "chainId": "omniflixhub-1",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/omniflix-logo.png",
+    "denom": "omniflixhubd",
+    "prefix": "omniflix",
+    "rpc": "https://omniflix-rpc.polkachu.com/",
+    "api": "https://omniflix-api.polkachu.com/",
+    "bip44": {
+      "coinType": 118
+    },
+    "bech32Config": {
+      "bech32PrefixAccAddr": "omniflix",
+      "bech32PrefixAccPub": "omniflixpub",
+      "bech32PrefixValAddr": "omniflixvaloper",
+      "bech32PrefixValPub": "omniflixvaloperpub",
+      "bech32PrefixConsAddr": "omniflixvalcons",
+      "bech32PrefixConsPub": "omniflixvalconspub"
+    },
+    "stakeCurrency": {
+      "coinDenom": "flix",
+      "coinMinimalDenom": "uflix",
+      "coinDecimals": 6,
+      "coinGeckoId": "omniflix-network"
+    },
+    "feeCurrencies": [
+      {
+        "coinDenom": "flix",
+        "coinMinimalDenom": "uflix",
+        "coinDecimals": 6,
+        "coinGeckoId": "omniflix-network",
+        "gasPriceStep": {
+          "low": 0.001,
+          "average": 0.001,
+          "high": 0.001
+        }
+      }
+    ],
+    "assets": [
+      {
+        "name": "Omnifix",
+        "symbol": "FLIX",
+        "denom": "flix",
+        "baseDenom": "uflix",
+        "cosmosHubId": "omniflixhub",
+        "decimals": 6,
+        "website": "https://omniflix.co/home",
+        "explorer": "https://www.mintscan.io/omniflix",
+        "shortDescription": "A network specifically designed for creators and communities, powered by NFTs.",
+        "description": "Interoperable p2p network for creators & sovereign communities to mint, manage, monetize & coordinate distribution activities around NFT.",
+        "link": "https://omniflix.co/home",
+        "coinGeckoId": "omniflix-network",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/omniflix-logo.png",
+        "ethereum": "0xC727f87871ee12Bbcedd2973746D1Deb7529aaD6"
+      }
+    ]
+  }
+  

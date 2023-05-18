@@ -1,0 +1,59 @@
+{
+    "name": "Comdex",
+    "chainId": "comdex-1",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/comdex-logo.png",
+    "denom": "cmdx",
+    "prefix": "comdex",
+    "rpc": "https://comdex-rpc.polkachu.com",
+    "api": "https://comdex-api.polkachu.com/",
+    "bip44": {
+      "coinType": 118
+    },
+    "bech32Config": {
+      "bech32PrefixAccAddr": "comdex",
+      "bech32PrefixAccPub": "comdexpub",
+      "bech32PrefixValAddr": "comdexvaloper",
+      "bech32PrefixValPub": "comdexvaloperpub",
+      "bech32PrefixConsAddr": "comdexvalcons",
+      "bech32PrefixConsPub": "comdexvalconspub"
+    },
+    "stakeCurrency": {
+      "coinDenom": "cmdx",
+      "coinMinimalDenom": "ucmdx",
+      "coinDecimals": 6,
+      "coinGeckoId": "comdex"
+    },
+    "feeCurrencies": [
+      {
+        "coinDenom": "cmdx",
+        "coinMinimalDenom": "ucmdx",
+        "coinDecimals": 6,
+        "coinGeckoId": "comdex",
+        "gasPriceStep": {
+          "low": 0.25,
+          "average": 0.25,
+          "high": 0.25
+        }
+      }
+    ],
+    "assets": [
+      {
+        "name": "Comdex",
+        "symbol": "CMDX",
+        "denom": "cmdx",
+        "baseDenom": "ucmdx",
+        "cosmosHubId": "comdex-1",
+        "decimals": 6,
+        "website": "https://comdex.one/",
+        "explorer": "https://mintscan.io/comdex",
+        "shortDescription": "Build bleeding-edge DeFi applications with Comdex.",
+        "description": "Comdex is an interchain DeFi infrastructure layer housing a suite of composable solutions on-chain.",
+        "link": "https://comdex.one/",
+        "coinGeckoId": "comdex",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/comdex-logo.png",
+        "ethereum": "IBC/EA3E1640F9B1532AB129A571203A0B9F789A7F14BB66E350DCBFA18E1A1931F0"
+      }
+    ]
+  }
+  

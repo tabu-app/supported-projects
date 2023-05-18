@@ -1,0 +1,59 @@
+{
+    "name": "Persistance",
+    "chainId": "core-1",
+    "type": "cosmos",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/persistance-logo.png",
+    "denom": "xprt",
+    "prefix": "persistence",
+    "rpc": "https://persistence-rpc.polkachu.com/",
+    "api": "https://persistence-api.polkachu.com/",
+    "bip44": {
+      "coinType": 118
+    },
+    "bech32Config": {
+      "bech32PrefixAccAddr": "persistence",
+      "bech32PrefixAccPub": "persistencepub",
+      "bech32PrefixValAddr": "persistencevaloper",
+      "bech32PrefixValPub": "persistencevaloperpub",
+      "bech32PrefixConsAddr": "persistencevalcons",
+      "bech32PrefixConsPub": "persistencevalconspub"
+    },
+    "stakeCurrency": {
+      "coinDenom": "xprt",
+      "coinMinimalDenom": "uxprt",
+      "coinDecimals": 6,
+      "coinGeckoId": "persistence"
+    },
+    "feeCurrencies": [
+      {
+        "coinDenom": "xprt",
+        "coinMinimalDenom": "uxprt",
+        "coinDecimals": 6,
+        "coinGeckoId": "persistence",
+        "gasPriceStep": {
+          "low": 0.0,
+          "average": 0.025,
+          "high": 0.050
+        }
+      }
+    ],
+    "assets": [
+      {
+        "name": "Persistance",
+        "symbol": "XPRT",
+        "denom": "xprt",
+        "baseDenom": "uxprt",
+        "cosmosHubId": "persistence",
+        "decimals": 6,
+        "website": "https://persistence.one/",
+        "explorer": "https://www.mintscan.io/persistence",
+        "shortDescription": "Liquid Staking Hub",
+        "description": "Persistence is a Tendermint based specialized Layer-1 powering an ecosystem of DeFi dApps focused on unlocking the liquidity of staked assets.",
+        "link": "https://persistence.one/",
+        "coinGeckoId": "persistence",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/persistence-logo.png",
+        "ethereum": "IBC/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293"
+      }
+    ]
+  }
+  

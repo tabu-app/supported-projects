@@ -53,6 +53,22 @@
         "coinGeckoId": "stride",
         "logo": "https://storage.googleapis.com/tabu-asset-images/stride-logo.png",
         "ethereum": "ibc/A8CA5EE328FA10C9519DF6057DA1F69682D28F7D0F5CCC7ECB72E3DCA2D157A4"
+      },
+      {
+        "name": "stATOM",
+        "symbol": "STATOM",
+        "baseDenom": "stuatom",
+        "denom": "stautom",
+        "cosmosHubId": "statom",
+        "decimals": 6,
+        "website": "https://stride.zone/",
+        "explorer": "https://www.mintscan.io/stride",
+        "shortDescription": "Join 50K+ Cosmonauts who use Stride. Secure the Cosmos. Unlock liquidity and earn more yield.",
+        "description": "Stride is a liquid staking protocol that unlocks the liquidity for staked assets in the IBC ecosystem.",
+        "link": "https://stride.zone/",
+        "coinGeckoId": "stride-staked-atom",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/statom-logo.png",
+        "ethereum": "ibc/A8CA5EE328FA10C9519DF6057DA1F69682D28F7D0F5CCC7ECB72E3DCA2D157A4"
       }
     ]
   }

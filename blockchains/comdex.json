@@ -53,6 +53,22 @@
         "coinGeckoId": "comdex",
         "logo": "https://storage.googleapis.com/tabu-asset-images/comdex-logo.png",
         "ethereum": "IBC/EA3E1640F9B1532AB129A571203A0B9F789A7F14BB66E350DCBFA18E1A1931F0"
+      },
+      {
+        "name": "$HARBOR",
+        "symbol": "HARBOR",
+        "denom": "harbor",
+        "baseDenom": "uharbor",
+        "cosmosHubId": "comdex-1",
+        "decimals": 6,
+        "website": "https://comdex.one/",
+        "explorer": "https://mintscan.io/comdex",
+        "shortDescription": "Build bleeding-edge DeFi applications with Comdex.",
+        "description": "Comdex is an interchain DeFi infrastructure layer housing a suite of composable solutions on-chain.",
+        "link": "https://comdex.one/",
+        "coinGeckoId": "",
+        "logo": "https://storage.googleapis.com/tabu-asset-images/comdex-logo.png",
+        "ethereum": "IBC/EA3E1640F9B1532AB129A571203A0B9F789A7F14BB66E350DCBFA18E1A1931F0"
       }
     ]
   }

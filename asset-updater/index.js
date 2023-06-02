@@ -118,7 +118,7 @@ async function storeAssets(chains) {
               firestore
                 .collection("assets")
                 .doc(key.toUpperCase())
-                .set({ ...asset, chainId }, {merge: true});
+                .set({ ...asset, chainId, isSupported: true }, {merge: true});
             });
           }
         })

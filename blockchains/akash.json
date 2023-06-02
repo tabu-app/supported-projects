@@ -40,7 +40,7 @@
     "assets": [
       {
         "name": "Akash",
-        "symbol": "AKASH",
+        "symbol": "AKT",
         "denom": "akt",
         "baseDenom": "uakt",
         "cosmosHubId": "akashnet-2",

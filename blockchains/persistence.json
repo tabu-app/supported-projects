@@ -2,7 +2,7 @@
     "name": "Persistence",
     "chainId": "core-1",
     "type": "cosmos",
-    "logo": "https://storage.googleapis.com/tabu-asset-images/persistance-logo.png",
+    "logo": "https://storage.googleapis.com/tabu-asset-images/persistence-logo.png",
     "denom": "xprt",
     "prefix": "persistence",
     "rpc": "https://persistence-rpc.polkachu.com/",

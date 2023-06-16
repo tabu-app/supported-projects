@@ -39,7 +39,7 @@
     ],
     "assets": [
       {
-        "name": "Persistance",
+        "name": "Persistence",
         "symbol": "XPRT",
         "denom": "xprt",
         "baseDenom": "uxprt",

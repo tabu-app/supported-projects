@@ -58,7 +58,7 @@
         "name": "stATOM",
         "symbol": "STATOM",
         "baseDenom": "stuatom",
-        "denom": "stautom",
+        "denom": "statom",
         "cosmosHubId": "statom",
         "decimals": 6,
         "website": "https://stride.zone/",

@@ -130,7 +130,7 @@
       "shortDescription": "Axelar powers the Cross-Chain future",
       "description": "Axelar delivers secure cross-chain communication for Web3. Our infrastructure enables dApp users to interact with any asset or application, on any chain, with one click.",
       "link": "https://www.binance.org/",
-      "coinGeckoId": "weth",
+      "coinGeckoId": "binancecoin",
       "logo": "https://storage.googleapis.com/tabu-asset-images/wbnb-logo.png",
       "ethereum": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
     }

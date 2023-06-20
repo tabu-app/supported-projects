@@ -19,7 +19,7 @@
         "bech32PrefixConsPub": "starsvalconspub"
     },
     "stakeCurrency": {
-        "coinDenom": "starsd",
+        "coinDenom": "stars",
         "coinMinimalDenom": "ustars",
         "coinDecimals": 6,
         "coinGeckoId": "stargaze"

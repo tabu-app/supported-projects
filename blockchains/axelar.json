@@ -66,7 +66,7 @@
       "shortDescription": "Axelar powers the Cross-Chain future",
       "description": "Axelar delivers secure cross-chain communication for Web3. Our infrastructure enables dApp users to interact with any asset or application, on any chain, with one click.",
       "link": "https://axelar.network/",
-      "coinGeckoId": "usd-coin",
+      "coinGeckoId": "axlusdc",
       "logo": "https://storage.googleapis.com/tabu-asset-images/usdc-coin-logo.png",
       "ethereum": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
     },
@@ -87,7 +87,7 @@
       "ethereum": "0x6b175474e89094c44da98b954eedeac495271d0f"
     },
     {
-      "name": "WMATIC",
+      "name": "Axel Wmatic",
       "symbol": "AXLWMATIC",
       "denom": "wmatic",
       "baseDenom": "wmatic-wei",
@@ -103,7 +103,7 @@
       "ethereum": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270"
     },
     {
-      "name": "WETH",
+      "name": "Axl Weth",
       "symbol": "AXLWETH",
       "denom": "weth",
       "baseDenom": "weth-wei",
@@ -114,12 +114,12 @@
       "shortDescription": "Axelar powers the Cross-Chain future",
       "description": "Axelar delivers secure cross-chain communication for Web3. Our infrastructure enables dApp users to interact with any asset or application, on any chain, with one click.",
       "link": "https://weth.io/",
-      "coinGeckoId": "weth",
+      "coinGeckoId": "axlweth",
       "logo": "https://storage.googleapis.com/tabu-asset-images/weth-logo.png",
       "ethereum": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
     },
     {
-      "name": "WBNB",
+      "name": "AXLWBNB",
       "symbol": "AXLWBNB",
       "denom": "wbnb",
       "baseDenom": "wbnb-wei",

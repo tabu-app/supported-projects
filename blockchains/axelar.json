@@ -57,7 +57,7 @@
     {
       "name": "Axelar USDC",
       "symbol": "AXLUSDC",
-      "denom": "USDC",
+      "denom": "axlusdc",
       "baseDenom": "uusdc",
       "cosmosHubId": "axelar-dojo-1",
       "decimals": 6,
@@ -73,7 +73,7 @@
     {
       "name": "Axelar DAI",
       "symbol": "AXLDAI",
-      "denom": "dai",
+      "denom": "axldai",
       "baseDenom": "dai-wei",
       "cosmosHubId": "axelar-dojo-1",
       "decimals": 18,
@@ -89,7 +89,7 @@
     {
       "name": "Axel Wmatic",
       "symbol": "AXLWMATIC",
-      "denom": "wmatic",
+      "denom": "axlwmatic",
       "baseDenom": "wmatic-wei",
       "cosmosHubId": "axelar-dojo-1",
       "decimals": 18,
@@ -105,7 +105,7 @@
     {
       "name": "Axl Weth",
       "symbol": "AXLWETH",
-      "denom": "weth",
+      "denom": "axlweth",
       "baseDenom": "weth-wei",
       "cosmosHubId": "axelar-dojo-1",
       "decimals": 18,
@@ -121,7 +121,7 @@
     {
       "name": "AXLWBNB",
       "symbol": "AXLWBNB",
-      "denom": "wbnb",
+      "denom": "axlwbnb",
       "baseDenom": "wbnb-wei",
       "cosmosHubId": "axelar-dojo-1",
       "decimals": 18,

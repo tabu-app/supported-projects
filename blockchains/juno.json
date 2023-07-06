@@ -62,7 +62,8 @@
       "link": "https://www.junonetwork.io/",
       "coinGeckoId": "juno-network",
       "logo": "https://storage.googleapis.com/tabu-asset-images/juno-logo.png",
-      "ethereum": "0x000000000000000000000000000000000000dEaD"
+      "ethereum": "0x000000000000000000000000000000000000dEaD",
+      "isStakable": true
     }
   ]
 }

@@ -52,7 +52,8 @@
             "link": "https://www.stargaze.zone/",
             "coinGeckoId": "stargaze",
             "logo": "https://storage.googleapis.com/tabu-asset-images/stargaze-logo.png",
-            "ethereum": "IBC/987C17B11ABC2B20019178ACE62929FE9840202CE79498E29FE8E5CB02B7C0A4"
+            "ethereum": "IBC/987C17B11ABC2B20019178ACE62929FE9840202CE79498E29FE8E5CB02B7C0A4",
+            "isStakable": true
         }
     ]
 }

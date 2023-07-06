@@ -52,7 +52,8 @@
         "link": "https://persistence.one/",
         "coinGeckoId": "persistence",
         "logo": "https://storage.googleapis.com/tabu-asset-images/persistence-logo.png",
-        "ethereum": "IBC/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293"
+        "ethereum": "IBC/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293",
+        "isStakable": true
       }
     ]
   }

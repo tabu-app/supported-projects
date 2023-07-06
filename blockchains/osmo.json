@@ -52,7 +52,8 @@
       "link": "https://app.osmosis.zone/",
       "coinGeckoId": "osmosis",
       "logo": "https://storage.googleapis.com/tabu-asset-images/osmo-logo.png",
-      "ethereum": "0x000000000000000000000000000000000000dEaD"
+      "ethereum": "0x000000000000000000000000000000000000dEaD",
+      "isStakable": true
     }
   ]
 }

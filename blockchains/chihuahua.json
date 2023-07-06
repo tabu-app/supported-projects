@@ -52,7 +52,8 @@
         "link": "https://www.chihuahua.wtf/",
         "coinGeckoId": "chihuahua-token",
         "logo": "https://storage.googleapis.com/tabu-asset-images/chihuahua-logo.png",
-        "ethereum": "IBC/B9E0A1A524E98BB407D3CED8720EFEFD186002F90C1B1B7964811DD0CCC12228"
+        "ethereum": "IBC/B9E0A1A524E98BB407D3CED8720EFEFD186002F90C1B1B7964811DD0CCC12228",
+        "isStakable": true
       }
     ]
   }

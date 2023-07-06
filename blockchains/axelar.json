@@ -87,7 +87,7 @@
       "ethereum": "0x6b175474e89094c44da98b954eedeac495271d0f"
     },
     {
-      "name": "Axel Wmatic",
+      "name": "Axelar MATIC",
       "symbol": "AXLWMATIC",
       "denom": "axlwmatic",
       "baseDenom": "wmatic-wei",
@@ -103,7 +103,7 @@
       "ethereum": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270"
     },
     {
-      "name": "Axl Weth",
+      "name": "Axelar ETH",
       "symbol": "AXLWETH",
       "denom": "axlweth",
       "baseDenom": "weth-wei",
@@ -119,7 +119,7 @@
       "ethereum": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
     },
     {
-      "name": "AXLWBNB",
+      "name": "Axelar BNB",
       "symbol": "AXLWBNB",
       "denom": "axlwbnb",
       "baseDenom": "wbnb-wei",

@@ -50,7 +50,8 @@
       "link": "https://app.umee.cc/#/markets",
       "coinGeckoId": "umee",
       "logo": "https://storage.googleapis.com/tabu-asset-images/umee-logo.png",
-      "ethereum": "0xc0a4df35568f116c370e6a6a6022ceb908eeddac"
+      "ethereum": "0xc0a4df35568f116c370e6a6a6022ceb908eeddac",
+      "isStakable": true
     }
   ]
 }

@@ -52,7 +52,8 @@
       "link": "https://comdex.one/",
       "coinGeckoId": "comdex",
       "logo": "https://storage.googleapis.com/tabu-asset-images/comdex-logo.png",
-      "ethereum": "IBC/EA3E1640F9B1532AB129A571203A0B9F789A7F14BB66E350DCBFA18E1A1931F0"
+      "ethereum": "IBC/EA3E1640F9B1532AB129A571203A0B9F789A7F14BB66E350DCBFA18E1A1931F0",
+      "isStakable": true
     }
   ]
 }

@@ -52,7 +52,8 @@
             "link": "https://kujira.app/",
             "coinGeckoId": "kujira",
             "logo": "https://storage.googleapis.com/tabu-asset-images/kujira-logo.png",
-            "ethereum": "0x96543ef8d2C75C26387c1a319ae69c0BEE6f3fe7"
+            "ethereum": "0x96543ef8d2C75C26387c1a319ae69c0BEE6f3fe7",
+            "isStakable": true
         }
     ]
 }

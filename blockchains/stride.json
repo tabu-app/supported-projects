@@ -52,7 +52,8 @@
         "link": "https://stride.zone/",
         "coinGeckoId": "stride",
         "logo": "https://storage.googleapis.com/tabu-asset-images/stride-logo.png",
-        "ethereum": "ibc/A8CA5EE328FA10C9519DF6057DA1F69682D28F7D0F5CCC7ECB72E3DCA2D157A4"
+        "ethereum": "ibc/A8CA5EE328FA10C9519DF6057DA1F69682D28F7D0F5CCC7ECB72E3DCA2D157A4",
+        "isStakable": true
       },
       {
         "name": "stATOM",

@@ -50,7 +50,8 @@
         "link": "https://app.crescent.network/swap",
         "coinGeckoId": "crescent-network",
         "logo": "https://storage.googleapis.com/tabu-asset-images/crescent-logo.png",
-        "ethereum": "0x000000000000000000000000000000000000dEaD"
+        "ethereum": "0x000000000000000000000000000000000000dEaD",
+        "isStakable": true
       },
       {
         "name": "Crescent",

@@ -28,7 +28,7 @@
       "coinDenom": "UMEE",
       "coinMinimalDenom": "uumee",
       "coinDecimals": 6,
-      "coingeckoId": "umee",
+      "coinGeckoId": "umee",
       "gasPriceStep": {
         "low": 0.05,
         "average": 0.06,
